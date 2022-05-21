@@ -795,7 +795,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-custom-pink {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 93 174 / var(--tw-bg-opacity));
+  background-color: rgb(102 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-white {
