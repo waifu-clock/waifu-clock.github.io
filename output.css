@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: #009698;
   /* 2 */
 }
 
@@ -949,7 +949,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .outline-custom-pink {
-  outline-color: #FF5DAE;
+  outline-color: #009698;
 }
 
 .outline-white\/30 {
