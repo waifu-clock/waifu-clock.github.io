@@ -795,7 +795,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-custom-pink {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 222 223 / var(--tw-bg-opacity));
+  background-color: rgb(190 255 244 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -949,7 +949,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .outline-custom-pink {
-  outline-color: #FFE5E7;
+#BEFFF4;
 }
 
 .outline-white\/30 {
