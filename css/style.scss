@@ -33,7 +33,10 @@ body{
     }
 
 }
-
+body{margin-top:20px;}
+.text-muted {
+    color: #8492a6 !important;
+}
 .logo{
     grid-area: image;
     background-position: center;
