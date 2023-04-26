@@ -71,18 +71,18 @@
 }
 
 
-/* #scroll-down-animation {
+#scroll-down-animation {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  margin-top: 15rem;
+  margin-top: 20rem;
 }
 
 #scroll-text {
   color: #000;
-  font-family: 'Roboto', 'Arial', sans-serif;
-  font-weight: 200;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
   font-size: 16px;
 }
 
@@ -113,14 +113,14 @@
     opacity: 0;
   }
   50% {
-    transform: translate(-50%,40px);
+    transform: translate(-50%,35px);
     opacity: 1;
   }
   100% {
-    transform: translate(-50%,80px);
+    transform: translate(-50%,45px);
     opacity: 0;
   }
-} */
+}
 
 #REI{
   background-image: linear-gradient( #fff 15%,#F1F4F9, #FFFBFC);
