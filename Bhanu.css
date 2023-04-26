@@ -20,8 +20,8 @@
 
 .btn {
   border: none;
-  background: rgb(251,33,117);
-    background: linear-gradient(0deg, rgba(251,33,117,1) 0%, rgba(234,76,137,1) 100%);
+  background: #d46892;
+    background: linear-gradient(0deg, rgb(235, 52, 122) 0%, #d46892 100%);
     color: #fff;
     overflow: hidden;
 }
