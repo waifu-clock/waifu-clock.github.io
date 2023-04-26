@@ -1,4 +1,16 @@
 
+/* .bg-custom-pink {
+  --tw-bg-opacity: 1;
+  background-color: rgb(190 255 244 / var(--tw-bg-opacity));
+} */
+/* .container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 8rem;
+} */
+
 .custom-btn {
   width: 160px;
   height: 50px;
