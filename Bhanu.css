@@ -113,3 +113,13 @@
 #REI{
   background-image: linear-gradient( #fff 15%,#F1F4F9, #FFFBFC);
 }
+
+.wallpaper{
+  text-transform: uppercase;
+	background: linear-gradient(to right, #7928CA 10%, #FF0080 30%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  font-size: 4rem;
+  /* font-family: 'Inter', sans-serif; */
+  font-weight: 700;
+}
