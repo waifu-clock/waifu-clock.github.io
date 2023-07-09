@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
 <style>
 .button {
   display: inline-block;
@@ -16,77 +16,74 @@
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
-
-.button:hover {background-color: #3e8e41}
+.button:hover {
+background-color: #3e8e41;
+}
 
 .button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+background-color: #3e8e41;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+
+.container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #f9f9f9;
+}
+
+.hero-content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-direction: row-reverse;
+max-width: 800px;
+margin: 0 auto;
+}
+
+.hero-content h2 {
+font-size: 48px;
+font-weight: bold;
+line-height: 1.2;
+text-align: center;
+text-transform: uppercase;
+}
+
+.hero-content p {
+font-size: 24px;
+margin-top: 20px;
+text-align: center;
+}
+
+.hero-content img {
+max-width: 400px;
+}
+
+.text-center {
+text-align: center;
+}
+
+.my-10 {
+margin-top: 10px;
+margin-bottom: 10px;
 }
 </style>
-  </head>
-  <body>
 
-
-	<div class="py-12 align-middle relative">
-      <div class="container">
-        <div
-          class="flex flex-col-reverse place-content-between place-items-center text-center md:flex-row md:text-left"
-        >
-          <div class="md:max-w-xl">
-            <h2 class="text-5xl leading-tight font-black uppercase">
-              ©REI🌸 
-            </h2>
-            <p class="text-lg my-10">
-              Check out the latest previews of Rei Here..
-            </p>
-            <!-- join community button -->
-
-
-
-
-		  </div>
-          <!-- right hero image -->
-          <img src="../images/mirror.png" />
-        </div>
-      </div>
-
+</head>
+<body>
+<div class="container">
+  <div class="hero-content">
+    <div>
+      <h2>©REI🌸</h2>
+      <p>Check out the latest previews of Rei Here..</p>
+      <a href="https://telegra.ph/WaifuClock-Plus-02-12"><button class="button">Lockscreen-Plus</button></a>
+      <a href="https://telegra.ph/WAIFUCLOCK-02-02"><button class="button">Lockscreen-Public</button></a>
+      <a href="https://telegra.ph/WaifuClock-04-24"><button class="button">HeaderClocks</button></a>
+    
+      <p class="text-lg my-10">(IF LINK NOT WORKING CHECK CHANNEL FOR PREVIEWS.)</p>
     </div>
-
-
-
-
-	<a href="https://telegra.ph/WaifuClock-Plus-02-12"
-	><button class="button">Lockscreen-Plus
-	  </button></a
-	>
-	<a href="https://telegra.ph/WAIFUCLOCK-02-02"
-	><button class="button">Lockscreen-Public
-	  </button></a
-	>
-
-
-
-
-
-
-
-  </body>
-  
-  <a href="https://telegra.ph/WaifuClock-04-24"
-  ><button class="button">HeaderClocks
-	</button></a
-  >
-
-
-  <p class="text-lg my-10">
-
-     (IF LINK NOT WORKING CHECK CHANNEL OF PREVIEWS.)
-  </p>
-
-
-</html>
-
-
+    

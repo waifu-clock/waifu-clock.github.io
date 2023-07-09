@@ -1,364 +1,604 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth text-sm md:text-base">
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="output.css" />
-    <link rel="stylesheet" href="./Bhanu.css">
-    <!-- <script defer src="https://cdn.tailwindcss.com"></script> -->
-  
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
-  
-  
-    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
-	<title>Rei substratum clocks</title>
-  </head>
-  <body class="font-ambit">
-    <!-- navigation menu -->
-    <nav class="container">
-      <div class="py-12 align-middle">
-        <div class="flex place-content-between items-center">
-          <!-- logo -->
-            <div>
-        <h1 class="text-4xl font-black uppercase mb-2">REI🌸</h1>
-        <h2 class="text-lg">Substratum Clocks</h2>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="./Bhanu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <title>Rei substratum clocks</title>
+  <style>
+    /* Global styles */
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    /* Navigation menu */
+    nav {
+      padding: 12px 0;
+    }
+    nav .logo {
+      text-align: center;
+    }
+    nav .logo h1 {
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 5px;
+    }
+    nav .logo h2 {
+      font-size: 18px;
+    }
+    nav .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+    }
+    nav .menu a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      margin-left: 10px;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    /* Hero section */
+    .hero {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .hero .content {
+      max-width: 600px;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    .hero .content h2 {
+      font-size: 42px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .hero .content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .hero .content button {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .hero .image {
+      max-width: 100%;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    /* Changelog section */
+    .changelog {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .changelog .content {
+      max-width: 600px;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    .changelog .content h2 {
+      font-size: 42px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .changelog .content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .changelog .content button {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .changelog .image {
+      max-width: 100%;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    /* Plus Features section */
+    .plus-features {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .plus-features .content {
+      max-width: 600px;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    .plus-features .content h2 {
+      font-size: 42px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .plus-features .content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .plus-features .content button {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .plus-features .image {
+      max-width: 100%;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    /* Awesome Setups section */
+    .awesome-setups {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .awesome-setups .content {
+      max-width: 600px;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    .awesome-setups .content h2 {
+      font-size: 42px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .awesome-setups .content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .awesome-setups .content button {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .awesome-setups .image {
+      max-width: 100%;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    /* Previews section */
+    .previews {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .previews .content {
+      max-width: 600px;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    .previews .content h2 {
+      font-size: 42px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .previews .content p {
+      font-size:18px;
+      margin-bottom: 20px;
+    }
+    .previews .content button {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .previews .image {
+      max-width: 100%;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    /* Help needed!? section */
+    .help-needed {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .help-needed .content {
+      max-width: 600px;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    .help-needed .content h2 {
+      font-size: 42px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .help-needed .content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .help-needed .content button {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .help-needed .image {
+      max-width: 100%;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    /* Stats section */
+    .stats {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .stats .content {
+      max-width: 600px;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    .stats .content button {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .stats .image {
+      max-width: 100%;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    /* Contact section */
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .contact .content {
+      max-width: 600px;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    .contact .content button {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .contact .image {
+      max-width: 100%;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    /* Footer */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+    footer .logo {
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 5px;
+    }
+    footer .menu {
+      display: flex;
+    }
+    footer .menu a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+    /* Animations */
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      nav .menu {
+        flex-direction: column;
+      }
+      .hero {
+        flex-direction: column;
+      }
+      .hero .content,
+      .hero .image {
+        max-width: 100%;
+      }
+      .changelog,
+      .plus-features,
+      .awesome-setups,
+      .previews,
+      .help-needed {
+        flex-direction: column;
+      }
+      .changelog .content,
+      .changelog .image,
+      .plus-features .content,
+      .plus-features .image,
+      .awesome-setups .content,
+      .awesome-setups .image,
+      .previews .content,
+      .previews .image,
+      .help-needed .content,
+      .help-needed .image {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- navigation menu -->
+  <nav>
+    <div class="container">
+      <div class="logo">
+        <h1>REI🌸</h1>
+        <h2>THEME ENGINE</h2>
       </div>
-          <!-- links -->
-     
-          <!-- mobile menu -->
-          <a class="md:hidden" href="rei://screen">
-            <img src="./images/hrt.png" alt="mobile menu"
-			/>
-	
-		</a>
-        </div>
+    
+    </div>
+  </nav>
+
+  <!-- hero section -->
+  <section class="hero">
+    <div class="container">
+      <div class="content">
+        <h2 class="text-5xl leading-tight font-black uppercase">
+          It's time to Theme
+        </h2>
+        <p class="text-lg my-10">
+          REI (aka WaifuClock) is one of the (Minimal/Japanese/Anime/Manga)-related Substratum Theme. Which gives an art elegant experience to your Lockscreen & HeaderClocks. Build & Enable your Favorite Clocks Now...
+        </p>
+        <!-- join community button -->
+        <a href="./pages/prw.html">
+          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
+            Previews
+          </button>
+    
+        </a>
       </div>
-    </nav>
+      <!-- right hero image -->
+      <img src="./images/hero-image.png" alt="hero image" class="image">
+    </div>
+  </section>
 
-    <!-- hero section -->
-    <div class="py-12 align-middle relative">
-      <div class="container">
-        <div class="flex flex-col-reverse place-content-between place-items-center text-center md:flex-row md:text-left">
-          <div class="md:max-w-xl">
+  <!-- changelog section -->
+  <section class="changelog">
+    <div class="container">
+      <div class="content">
+        <h2 class="text-5xl leading-tight font-black uppercase">
+          ChangeLogs
+        </h2>
+        <p class="text-lg my-10">
+          Latest Changelogs of the Theme
+        </p>
+        <!-- join community button -->
+        <a href="./pages/changes.html">
+          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
+```html
+            Check Here
+          </button>
+        </a>
+      </div>
+      <!-- right changelog image -->
+      <img src="./images/feature5.png" alt="changelog image" class="image">
+    </div>
+  </section>
 
-            <h2 class="text-5xl leading-tight font-black uppercase">
-              It's time to Theme 
-            </h2>
-            <p class="text-lg my-10">
-              REI (aka WaifuClock) is one of the (Minimal/Japanese/Anime/Manga) -related Substratum Theme. Which gives an art elegant experience to your Lockscreen & HeaderClocks.
-             which also comes with ibuilt PREVIEWS,WALLPAPERS ETC. Build & Enable your Favourite Clocks Now..............
-            </p>
-            <!-- join community button -->
-            <a href="./pages/offer.html">
-              <button type="button" class="uppercase outline text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-                Check OFFERS
-              </button>
-            </a>
-          </div>
-          <!-- right hero image -->
-          <img src="./images/hero-image.png" alt="hero image" />
-        </div>
+  <!-- plus features section -->
+  <section class="plus-features">
+    <div class="container">
+      <div class="content">
+        <h2 class="text-5xl leading-tight font-black uppercase">
+          Plus Features
+        </h2>
+        <p class="text-lg my-10">
+          WaifuClock Plus has more than 45+ Lockscreen Clocks & HeaderClocks with UNENCRYPTED ACCESS.
+        </p>
+        <!-- join community button -->
+        <a href="https://waifu-clock.github.io/features.io/">
+          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
+            Check-Plus
+          </button>
+        </a>
+      </div>
+      <!-- right plus features image -->
+      <img src="./images/feature1.png" alt="plus features image" class="image">
+    </div>
+  </section>
+
+  <!-- awesome setups section -->
+  <section class="awesome-setups">
+    <div class="container">
+      <div class="content">
+        <h2 class="text-5xl leading-tight font-black uppercase">
+          Awesome Setups
+        </h2>
+        <p class="text-lg my-10">
+          Get awesome custom setups & previews of WaifuClock and other themes...
+        </p>
+        <!-- join community button -->
+        <a href="https://telegram.me/weebo_setup">
+          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
+            Join Channel
+          </button>
+        </a>
+      </div>
+      <!-- right awesome setups image -->
+      <img src="./images/feature3.png" alt="awesome setups image" class="image">
+    </div>
+  </section>
+
+  <!-- previews section -->
+  <section class="previews">
+    <div class="container">
+      <div class="content">
+        <h2 class="text-5xl leading-tight font-black uppercase">
+          Previews
+        </h2>
+        <p class="text-lg my-10">
+          Check previews of custom locks & HeaderClocks
+        </p>
+        <!-- join community button -->
+        <a href="./pages/prw.html">
+          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
+            Previews
+          </button>
+        </a>
+      </div>
+      <!-- right previews image -->
+      <img src="./images/feature2.png" alt="previews image" class="image">
+    </div>
+  </section>
+
+  <!-- help needed section -->
+  <section class="help-needed">
+    <div class="container">
+      <div class="content">
+        <h2 class="text-5xl leading-tight font-black uppercase">
+          Help needed!?
+        </h2>
+        <p class="text-lg my-10">
+          REI (aka Waifu-Clock) now supports a Support group that helps to fix many problems.
+        </p>
+        <!-- join community button -->
+        <a href="https://telegram.me/weebo_setup">
+          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
+            Support
+          </button>
+        </a>
+      </div>
+      <!-- right help needed image -->
+      <img src="./images/feature4.png" alt="help needed image" class="image">
+    </div>
+  </section>
+
+  <!-- stats section -->
+  <section class="stats">
+    <div class="container">
+      <div class="content">
+        <button class="custom-btn btn mt-11">MIRROR <div class="dot"></div></button>
+        <a href="https://www.pling.com/p/1684224/">
+          <button class="custom-btn btn mt-11">Download<div class="dot"></div></button>
+        </a>
+        <h2></h2>
+        <p>Download Your Custom Clocks Now</p>
+      </div>
+      <img src="./images/feature6.png" alt="" class="image">
+    </div>
+  </section>
+
+  <!-- contact section -->
+  <section class="contact">
+    <div class="container">
+      <div class="content">
+        <h2 class="text-5xl leading-tight font-black uppercase"></h2>
+        <p class="text-lg my-10">Contact me for more details</p>
+        <a href="https://telegra.ph/Credits-07-19">
+          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
+            Credits
+          </button>
+        </a>
+        <a href="https://telegram.me/hyp3r_sh">
+          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
+            Maintainer
+          </button>
+        </a>
+      </div>
+      <img src="./images/member2.png" alt="" class="image">
+    </div>
+  </section>
+
+  <iframe id="kofiframe" src="https://ko-fi.com/hypersh/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;padding:4px;background:#f9f9f9;" height="712" title="hypersh"></iframe>
+
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="logo">
+        <h1>©REI🌸</h1>
+        <h2>Substratum Clocks</h2>
+      </div>
+      <div class="menu">
+        
       </div>
     </div>
-    
-
-
- 
-
-
-
-
-
-
-              <!-- right chagelog image -->
-     <div class="py-12 align-middle relative">
-      <div class="container">
-        <div
-          class="flex flex-col-reverse place-content-between place-items-center text-center md:flex-row md:text-left"
-        >
-          <div class="md:max-w-xl">
-            <h2 class="text-5xl leading-tight font-black uppercase">
-              ChangeLogs
-            </h2>
-            <p class="text-lg my-10">
-             Latest Changelogs of the Theme
-            </p>
-            <!-- join community button -->
-              <a href="./pages/changes.html"
-              >
-                  <button
-                      type="button"
-                      class="uppercase outline text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0"
-              >
-                CHeck Here
-              </button></a
-            >
-
-
-
-          </div>
-          <!-- right hero image -->
-          <img src="./images/feature5.png" alt="hero image" />
-        </div>
-      </div>
-
-    </div>
-    
- <div class="py-12 align-middle relative">
-      <div class="container">
-        <div
-          class="flex flex-col-reverse place-content-between place-items-center text-center md:flex-row md:text-left"
-        >
-          <div class="md:max-w-xl">
-            <h2 class="text-5xl leading-tight font-black uppercase">
-              Plus Features
-            </h2>
-            <p class="text-lg my-10">
-              WaifuClock Plus has more than 45+ Lockscreen Clocks & HeaderClocks & Un UNENCRYPTED ACCESS
-            </p>
-            <!-- join community button -->
-            <a href="https://waifu-clock.github.io/features.io/"
-			><button
-                type="button"
-                class="uppercase outline text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0"
-              >
-                Check-Plus
-              </button></a
-            >
-
-
-
-          </div>
-          <!-- right hero image -->
-          <img src="./images/feature1.png" alt="hero image" />
-        </div>
-      </div>
-
-    </div>
-    
-    
-    
-    
- <div class="py-12 align-middle relative">
-      <div class="container">
-        <div
-          class="flex flex-col-reverse place-content-between place-items-center text-center md:flex-row md:text-left"
-        >
-          <div class="md:max-w-xl">
-            <h2 class="text-5xl leading-tight font-black uppercase">
-              Awesome Setups
-            </h2>
-            <p class="text-lg my-10">
-              Get awesome Custom setups & previews of waifuclock & other themes...
-            </p>
-            <!-- join community button -->
-            <a href="https://telegram.me/weebo_setup"
-			><button
-                type="button"
-                class="uppercase outline text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0"
-              >
-                Join Channel
-              </button></a
-            >
-
-
-
-          </div>
-          <!-- right hero image -->
-          <img src="./images/feature3.png" alt="hero image" />
-        </div>
-      </div>
-
-    </div>
-
-
-
-
-
-
-
-
- <div class="py-12 align-middle relative">
-      <div class="container">
-        <div
-          class="flex flex-col-reverse place-content-between place-items-center text-center md:flex-row md:text-left"
-        >
-          <div class="md:max-w-xl">
-            <h2 class="text-5xl leading-tight font-black uppercase">
-              previews
-            </h2>
-            <p class="text-lg my-10">
-              Check Previews of custom locks & HeaderClocks
-            </p>
-            <!-- join community button -->
-            <a href="./pages/prw.html"
-			><button
-                type="button"
-                class="uppercase outline text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0"
-              >
-                Previews
-              </button></a
-            >
-
-
-
-          </div>
-          <!-- right hero image -->
-          <img src="./images/feature2.png" alt="hero image" />
-        </div>
-      </div>
-
-    </div>
-    
-    
-    
-    
-    
-    
-    
- <div class="py-12 align-middle relative">
-      <div class="container">
-        <div
-          class="flex flex-col-reverse place-content-between place-items-center text-center md:flex-row md:text-left"
-        >
-          <div class="md:max-w-xl">
-            <h2 class="text-5xl leading-tight font-black uppercase">
-              Help needed!?
-            </h2>
-            <p class="text-lg my-10">
-              REI (akaWaifu-Clock) now Supports for Support group which helps to fix your many problems.
-            </p>
-            <!-- join community button -->
-            <a href="https://telegram.me/weebo_setup"
-			><button
-                type="button"
-                class="uppercase outline text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0"
-              >
-                Support
-              </button></a
-            >
-
-
-
-          </div>
-          <!-- right hero image -->
-          <img src="./images/feature4.png" alt="hero image" />
-        </div>
-      </div>
-
-    </div>
-    
-    
-    
-    
-    
-   
-    
-    
-
-    
-
-	
-
-
-    <!-- stats section -->
-	<div class="py-12 align-middle relative">
-
-	  <img class="mt-11 mb-16" src="./images/feature6.png" alt="" />
-	  <div class="container">
-		<div
-		  class="flex flex-col-reverse place-content-between place-items-center text-center md:flex-row md:text-left"
-		>
-		  
-  
-    
-    <a href="./pages/mirror.html">
-      <button class="custom-btn btn mt-11">MIRROR <div class="dot"></div></button>
-    </a>
-      <a href="https://www.pling.com/p/1684224/">
-        <button class="custom-btn btn mt-11">Download<div class="dot"></div></button>
-      </a>
-		  <div class="md:max-w-xl">
-			<h2 class="text-5xl leading-tight font-black uppercase">
-
-			</h2>
-			<p class="text-lg my-10">
-			Download Your Custom Clocks Now
-
-
-		  </div>
-		</div>
-	  </div>
-
-    </div>
-	
-	
-	  
-	<!-- right hero image -->
-	
-	  
-
-
-
-	  
-<div class="py-12 align-middle relative">
-
-        <img class="mt-11 mb-16" src="./images/member2.png" alt="" />
-		<div class="container">
-		  <div
-			class="flex flex-col-reverse place-content-between place-items-center text-center md:flex-row md:text-left"
-		  >
-			<div class="md:max-w-xl">
-			  <h2 class="text-5xl leading-tight font-black uppercase">
-				 
-			  </h2>
-			  <p class="text-lg my-10">
-              Contact me for More details
-			  <!-- join community button -->
-			
-			</div>
-       <a href="https://telegra.ph/Credits-07-19"
-			><button
-                type="button"
-                class="uppercase outline text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0"
-              >
-                Credits
-              </button></a
-            >
-       <a href="https://telegram.me/hyp3r_sh"
-			><button
-                type="button"
-                class="uppercase outline text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0"
-              >
-                Maintainer
-              </button></a
-            >
-	  
-	</div>
-	</div>
-
-    </div>
-
-
-    <iframe id='kofiframe' src='https://ko-fi.com/hypersh/?hidefeed=true&widget=true&embed=true&preview=true'
-    style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='hypersh'></iframe>
-
-
-
-    <!-- footer -->
-    <footer id="footer" class="container flex place-content-between py-20">
-      <!-- footer logo -->
-      <div>
-        <h1 class="text-4xl font-black uppercase mb-2">©REI🌸</h1>
-        <h2 class="text-lg">Substratum Clocks</h2>
-      </div>
-      <div class="flex flex-col md:flex-row">
-
-      </div>
-    </footer>
-  </body>
-</html>    
+  </footer>
+</body>
+</html>
