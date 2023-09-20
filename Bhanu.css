@@ -11,6 +11,51 @@
   padding-left: 8rem;
 } */
 
+@keyframes zoom-in {
+    from {
+      transform: scale(0.8); /* Start with a smaller size */
+      opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+      transform: scale(1); /* Zoom to normal size */
+      opacity: 1; /* Fade in */
+    }
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: zoom-in 1.5s forwards; /* Apply the zoom-in animation */
+  }
+
+  /* Add styles for centered logo */
+  .logo img {
+    max-width: 100%; /* Ensure logo doesn't exceed its container */
+    margin: 0 auto; /* Center the logo */
+  }
+
+  /* Add styles for the button animation */
+  .hero .content button {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in 1s forwards, slide-up 1s forwards;
+  }
+
+  /* Define the slide-up animation */
+  @keyframes slide-up {
+    from {
+      transform: translateY(20px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+</style>
+
 .custom-btn {
   width: 160px;
   height: 50px;
