@@ -3,6 +3,19 @@
 <head>
  
   <style>
+    @keyframes slideInAnimation {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .doctype {
+      animation: slideInAnimation 1s forwards;
+    }
+
     body {
       margin: 0;
       padding: 0;
