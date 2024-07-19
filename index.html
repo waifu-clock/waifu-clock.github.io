@@ -6,20 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="output.css">
   <link rel="stylesheet" href="./Bhanu.css">
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2031700534603729"
-     crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2031700534603729" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="images/favicon.png">
-  <title>Enter the ReiVerse </title>
-<section class="hero">
-  <div class="cont">
-    <div class="content">
-    
-     
-    
-    </div>
-  </div>
-</section>
+  <title>Enter the ReiVerse</title>
   <style>
     /* Global styles */
     html {
@@ -30,6 +20,7 @@
       margin: 0;
       padding: 0;
       line-height: 1.5;
+      background-color: #f5f5f5;
     }
     .container {
       max-width: 1200px;
@@ -38,17 +29,21 @@
     }
 
     .cont {
-  display: flex;
-  background-image: url("/images/purpleblur.png");
-  background-size: cover;
-  background-color: rgba(255, 255, 255, 0.5); /* Fallback background color */
-  backdrop-filter: blur(10px);
-}
-
+      display: flex;
+      background-image: url("/images/purpleblur.png");
+      background-size: cover;
+      background-color: rgba(255, 255, 255, 0.5); /* Fallback background color */
+      backdrop-filter: blur(10px);
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
     /* Navigation menu */
     nav {
       padding: 12px 0;
+      background-color: #6200ea;
+      color: white;
     }
     nav .logo {
       text-align: center;
@@ -60,6 +55,7 @@
     }
     nav .logo h2 {
       font-size: 18px;
+      margin: 0;
     }
     nav .menu {
       display: flex;
@@ -69,7 +65,7 @@
     }
     nav .menu a {
       text-decoration: none;
-      color: #000;
+      color: white;
       font-weight: bold;
       margin-left: 10px;
       opacity: 0;
@@ -78,11 +74,13 @@
     /* Hero section */
     .hero {
       display: flex;
-      flex-direction: column-reverse;
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
       text-align: center;
-      margin-bottom: 30px;
+      padding: 50px 20px;
+      background-color: #bb86fc;
+      color: white;
     }
     .hero .content {
       max-width: 600px;
@@ -102,25 +100,33 @@
       font-size: 18px;
       font-weight: bold;
       padding: 10px 20px;
-      background-color: #ff69b4;
-      color: #fff;
+      background-color: #03dac5;
+      color: #6200ea;
       border: none;
       border-radius: 30px;
       cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .hero .content button:hover {
+      background-color: #018786;
+      transform: scale(1.1);
     }
     .hero .image {
       max-width: 100%;
       opacity: 0;
       animation: fade-in 1s forwards;
     }
+
     /* Changelog section */
     .changelog {
       display: flex;
-      flex-direction: column-reverse;
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
       text-align: center;
-      margin-bottom: 30px;
+      padding: 50px 20px;
+      background-color: #3700b3;
+      color: white;
     }
     .changelog .content {
       max-width: 600px;
@@ -140,25 +146,34 @@
       font-size: 18px;
       font-weight: bold;
       padding: 10px 20px;
-      background-color: #ff69b4;
-      color: #fff;
+      background-color: #03dac5;
+      color: #3700b3;
       border: none;
       border-radius: 30px;
       cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .changelog .content button:hover {
+      background-color: #018786;
+      transform: scale(1.1);
     }
     .changelog .image {
       max-width: 100%;
       opacity: 0;
       animation: fade-in 1s forwards;
     }
+
+    /* Other sections styled similarly */
     /* Plus Features section */
     .plus-features {
       display: flex;
-      flex-direction: column-reverse;
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
       text-align: center;
-      margin-bottom: 30px;
+      padding: 50px 20px;
+      background-color: #03dac6;
+      color: #6200ea;
     }
     .plus-features .content {
       max-width: 600px;
@@ -178,25 +193,33 @@
       font-size: 18px;
       font-weight: bold;
       padding: 10px 20px;
-      background-color: #ff69b4;
-      color: #fff;
+      background-color: #6200ea;
+      color: #03dac5;
       border: none;
       border-radius: 30px;
       cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .plus-features .content button:hover {
+      background-color: #3700b3;
+      transform: scale(1.1);
     }
     .plus-features .image {
       max-width: 100%;
       opacity: 0;
       animation: fade-in 1s forwards;
     }
+
     /* Awesome Setups section */
     .awesome-setups {
       display: flex;
-      flex-direction: column-reverse;
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
       text-align: center;
-      margin-bottom: 30px;
+      padding: 50px 20px;
+      background-color: #bb86fc;
+      color: #3700b3;
     }
     .awesome-setups .content {
       max-width: 600px;
@@ -216,25 +239,33 @@
       font-size: 18px;
       font-weight: bold;
       padding: 10px 20px;
-      background-color: #ff69b4;
-      color: #fff;
+      background-color: #03dac5;
+      color: #bb86fc;
       border: none;
       border-radius: 30px;
       cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .awesome-setups .content button:hover {
+      background-color: #018786;
+      transform: scale(1.1);
     }
     .awesome-setups .image {
       max-width: 100%;
       opacity: 0;
       animation: fade-in 1s forwards;
     }
+
     /* Previews section */
     .previews {
       display: flex;
-      flex-direction: column-reverse;
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
       text-align: center;
-      margin-bottom: 30px;
+      padding: 50px 20px;
+      background-color: #6200ea;
+      color: #03dac6;
     }
     .previews .content {
       max-width: 600px;
@@ -247,32 +278,40 @@
       margin-bottom: 20px;
     }
     .previews .content p {
-      font-size:18px;
+      font-size: 18px;
       margin-bottom: 20px;
     }
     .previews .content button {
       font-size: 18px;
       font-weight: bold;
       padding: 10px 20px;
-      background-color: #ff69b4;
-      color: #fff;
+      background-color: #03dac5;
+      color: #6200ea;
       border: none;
       border-radius: 30px;
       cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .previews .content button:hover {
+      background-color: #018786;
+      transform: scale(1.1);
     }
     .previews .image {
       max-width: 100%;
       opacity: 0;
       animation: fade-in 1s forwards;
     }
-    /* Help needed!? section */
+
+    /* Help Needed section */
     .help-needed {
       display: flex;
-      flex-direction: column-reverse;
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
       text-align: center;
-      margin-bottom: 30px;
+      padding: 50px 20px;
+      background-color: #3700b3;
+      color: white;
     }
     .help-needed .content {
       max-width: 600px;
@@ -292,24 +331,32 @@
       font-size: 18px;
       font-weight: bold;
       padding: 10px 20px;
-      background-color: #ff69b4;
-      color: #fff;
+      background-color: #03dac5;
+      color: #3700b3;
       border: none;
       border-radius: 30px;
       cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .help-needed .content button:hover {
+      background-color: #018786;
+      transform: scale(1.1);
     }
     .help-needed .image {
       max-width: 100%;
       opacity: 0;
       animation: fade-in 1s forwards;
     }
+
     /* Stats section */
     .stats {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      margin-bottom: 30px;
+      padding: 50px 20px;
+      background-color: #bb86fc;
+      color: #6200ea;
     }
     .stats .content {
       max-width: 600px;
@@ -320,24 +367,57 @@
       font-size: 18px;
       font-weight: bold;
       padding: 10px 20px;
-      background-color: #ff69b4;
-      color: #fff;
+      background-color: #03dac5;
+      color: #bb86fc;
       border: none;
       border-radius: 30px;
       cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .stats .content button:hover {
+      background-color: #018786;
+      transform: scale(1.1);
     }
     .stats .image {
       max-width: 100%;
       opacity: 0;
       animation: fade-in 1s forwards;
     }
+
     /* Contact section */
     .contact {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      margin-bottom: 30px;
+      padding: 50px 20px;
+      background-color: #6200ea;
+      color: white;
+    }
+    .contact .content {
+      max-width: 600px;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    .contact .content button {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: #03dac5;
+      color: #6200ea;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .contact .content button:hover {
+      background-color: #018786;
+      transform: scale(1.1);
+    }
+    .contact .image {
+      max-width: 100%;
+      opacity: 0;
+      animation: fade-in 1s forwards;
     }
 
     .card {
@@ -350,536 +430,112 @@
       backdrop-filter: blur(10px);
       width: 300px;
       margin: 0 auto;
-
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-.spinner {
-    background: url(data:image/png;base64,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) no-repeat center;
-    display: block;
-    margin: 5% auto;
-    position: relative;
-    width: 159px;
-    height: 59px;
-}
-@-webkit-keyframes pulse {
- 0% {
- opacity: 0;
- background-position: center top;
- -moz-background-size: 0 auto;
- -o-background-size: 0 auto;
- -webkit-background-size: 0 auto;
- background-size: 0 auto;
-}
- 10% {
- opacity: 0;
-}
- 50% {
- opacity: 1;
- -moz-background-size: 20% auto;
- -o-background-size: 20% auto;
- -webkit-background-size: 20% auto;
- background-size: 20% auto;
-}
- 90% {
- opacity: 0;
-}
- 100% {
- opacity: 0;
- background-position: center bottom;
- -moz-background-size: 0 auto;
- -o-background-size: 0 auto;
- -webkit-background-size: 0 auto;
- background-size: 0 auto;
-}
-}
- @-moz-keyframes pulse {
- 0% {
- opacity: 0;
- background-position: center top;
- -moz-background-size: 0 auto;
- -o-background-size: 0 auto;
- -webkit-background-size: 0 auto;
- background-size: 0 auto;
-}
- 10% {
- opacity: 0;
-}
- 50% {
- opacity: 1;
- -moz-background-size: 20% auto;
- -o-background-size: 20% auto;
- -webkit-background-size: 20% auto;
- background-size: 20% auto;
-}
- 90% {
- opacity: 0;
-}
- 100% {
- opacity: 0;
- background-position: center bottom;
- -moz-background-size: 0 auto;
- -o-background-size: 0 auto;
- -webkit-background-size: 0 auto;
- background-size: 0 auto;
-}
-}
- @-ms-keyframes pulse {
- 0% {
- opacity: 0;
- background-position: center top;
- -moz-background-size: 0 auto;
- -o-background-size: 0 auto;
- -webkit-background-size: 0 auto;
- background-size: 0 auto;
-}
- 10% {
- opacity: 0;
-}
- 50% {
- opacity: 1;
- -moz-background-size: 20% auto;
- -o-background-size: 20% auto;
- -webkit-background-size: 20% auto;
- background-size: 20% auto;
-}
- 90% {
- opacity: 0;
-}
- 100% {
- opacity: 0;
- background-position: center bottom;
- -moz-background-size: 0 auto;
- -o-background-size: 0 auto;
- -webkit-background-size: 0 auto;
- background-size: 0 auto;
-}
-}
- @keyframes pulse {
- 0% {
- opacity: 0;
- background-position: center top;
- -moz-background-size: 0 auto;
- -o-background-size: 0 auto;
- -webkit-background-size: 0 auto;
- background-size: 0 auto;
-}
- 10% {
- opacity: 0;
-}
- 50% {
- opacity: 1;
- -moz-background-size: 20% auto;
- -o-background-size: 20% auto;
- -webkit-background-size: 20% auto;
- background-size: 20% auto;
-}
- 90% {
- opacity: 0;
-}
- 100% {
- opacity: 0;
- background-position: center bottom;
- -moz-background-size: 0 auto;
- -o-background-size: 0 auto;
- -webkit-background-size: 0 auto;
- background-size: 0 auto;
-}
-}
-.scroll-down a {
-	display: block;
-	opacity: 0;
-	-moz-transition: all 0.4s ease;
-	-o-transition: all 0.4s ease;
-	-webkit-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-	line-height: 0;
-	font-size: 0;
-	color: transparent;
-	margin-left: auto;
-	margin-right: auto;
-	-moz-background-size: 0 auto;
-	-o-background-size: 0 auto;
-	-webkit-background-size: 0 auto;
-	background-size: 0 auto;
-	-webkit-animation: pulse 1.5s 0s infinite normal ease forwards;
-	-moz-animation: pulse 1.5s 0s infinite normal ease forwards;
-	-o-animation: pulse 1.5s 0s infinite normal ease forwards;
-	animation: pulse 1.5s 0s infinite normal ease forwards;
-	background-image: url(images/arrow-down.svg);
-	background-repeat: no-repeat;
-}
-.scroll-down a:before, .scroll-down a:after {
-	content: " ";
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-	width: 100%;
-	height: 100%;
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMzAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiMwMTM0NmIiIGQ9Ik0yMS44NSw3LjE2YzAsMC4zMDktMC4xMTgsMC42MTctMC4zNTMsMC44NTNsLTUuNjgxLDUuNjhjLTAuNDcxLDAuNDcxLTEuMjMzLDAuNDcxLTEuNzA0LDBsLTUuNjgxLTUuNjgNCgkJYy0wLjQ3LTAuNDcxLTAuNDctMS4yMzMsMC0xLjcwNGMwLjQ3MS0wLjQ3LDEuMjM0LTAuNDcsMS43MDQsMGw0LjgyOCw0LjgyOGw0LjgyOC00LjgyOGMwLjQ3Mi0wLjQ3LDEuMjM0LTAuNDcsMS43MDQsMA0KCQlDMjEuNzMxLDYuNTQzLDIxLjg1LDYuODUyLDIxLjg1LDcuMTZ6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center top;
-	-moz-background-size: 100% auto;
-	-o-background-size: 100% auto;
-	-webkit-background-size: 100% auto;
-	background-size: 100% auto;
-}
-.scroll-down a:before {
-	-webkit-animation: pulse 1.5s 0.25s infinite normal ease forwards;
-	-moz-animation: pulse 1.5s 0.25s infinite normal ease forwards;
-	-o-animation: pulse 1.5s 0.25s infinite normal ease forwards;
-	animation: pulse 1.5s 0.25s infinite normal ease forwards;
-}
-.scroll-down a:after {
-	-webkit-animation: pulse 1.5s 0.5s infinite normal ease forwards;
-	-moz-animation: pulse 1.5s 0.5s infinite normal ease forwards;
-	-o-animation: pulse 1.5s 0.5s infinite normal ease forwards;
-	animation: pulse 1.5s 0.5s infinite normal ease forwards;
-}
-
-
-    .contact .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .contact .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #ff69b4;
-      color: #fff;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-    }
-    .contact .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    /* Footer */
-    footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-    }
-    footer .logo {
-      font-size: 32px;
-      font-weight: 900;
-      margin-bottom: 5px;
-    }
-    footer .menu {
-      display: flex;
-    }
-    footer .menu a {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-      margin-left: 10px;
-    }
-    /* Animations */
     @keyframes fade-in {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
       to {
         opacity: 1;
-        transform: translateY(0);
       }
     }
-    /* Responsive styles */
+
+    /* Responsive design */
     @media (max-width: 768px) {
       nav .menu {
         flex-direction: column;
       }
-      .hero {
-        flex-direction: column;
+      .hero, .changelog, .plus-features, .awesome-setups, .previews, .help-needed, .stats, .contact {
+        padding: 30px 15px;
       }
-      .hero .content,
-      .hero .image {
-        max-width: 100%;
+      .hero .content h2, .changelog .content h2, .plus-features .content h2, .awesome-setups .content h2, .previews .content h2, .help-needed .content h2 {
+        font-size: 32px;
       }
-      .changelog,
-      .plus-features,
-      .awesome-setups,
-      .previews,
-      .help-needed {
-        flex-direction: column;
-      }
-      .changelog .content,
-      .changelog .image,
-      .plus-features .content,
-      .plus-features .image,
-      .awesome-setups .content,
-      .awesome-setups .image,
-      .previews .content,
-      .previews .image,
-      .help-needed .content,
-      .help-needed .image {
-        max-width: 100%;
+      .hero .content p, .changelog .content p, .plus-features .content p, .awesome-setups .content p, .previews .content p, .help-needed .content p {
+        font-size: 16px;
       }
     }
   </style>
 </head>
-<body class="font-ambit">
-  <!-- navigation menu -->
+<body>
   <nav>
-    <div class="container">
-      <div class="logo">
-        <h1> </h1>
-        <h2> </h2>
-        
-      </div>
-    
+    <div class="logo">
+      <h1>Enter the ReiVerse</h1>
+      <h2>Your Journey Begins Here</h2>
+    </div>
+    <div class="menu">
+      <a href="#hero">Home</a>
+      <a href="#changelog">Changelog</a>
+      <a href="#plus-features">Plus Features</a>
+      <a href="#awesome-setups">Awesome Setups</a>
+      <a href="#previews">Previews</a>
+      <a href="#help-needed">Help Needed</a>
+      <a href="#stats">Stats</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
-
-  <!-- hero section -->
-  <section class="hero">
-    <div class="cont">
-      <div class="content">
-        <h2 class="text-5xl leading-tight font-black uppercase">
-          
-<span class="text-custom-black">Welcome to</span>
-</h2>
-<h2 class="text-5xl leading-tight font-black uppercase">
-<span class="text-custom-pink">REI-verse</span>
-        </h2>
-        <div class="flex flex-col items-center mt-4">
-          <p class="text-lg mb-4">
-            REI (aka WaifuClock) is one of the Minimal-Japanese-Anime-Manga related Theme Engine. Which gives an art elegant experience to your Lockscreen, HeaderClocks, and Qsshapes.
-          </p>
-          <p class="text-lg mb-4">
-            There are three variants available.
-          </p>
-         
-        </div>
-        <div class="spinner scroll-down"> <a class="animate"></a> </div>
-      
-        <!-- join community button -->
-       
-      </div>
-      
-      
-      
-
-      <!-- right hero image -->
-     
+  <div id="hero" class="hero">
+    <div class="content">
+      <h2>Welcome to the ReiVerse</h2>
+      <p>Discover the limitless possibilities and embark on your journey in the ReiVerse.</p>
+      <button>Get Started</button>
     </div>
-  </section>
-
-  <!-- changelog section -->
-  <section class="changelog">
-    <div class="container">
-      <img src="./images/hero-image.jpg" alt="hero image" class="image">
-      <div class="content">
-        <h1 class="text-2xl leading-tight font-black uppercase">
-         1. PUBLIC Version
-        </h1>
-        <p class="text-lg my-10">
-          Public version has been upgraded.
-          Now supports ksu and A12+.also RUI AND OOS (Depends so try).
-        </p>
-        <!-- join community button -->
-        <a href="https://play.google.com/store/apps/details?id=com.rei.pub">
-          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-            Check Here
-          </button>
-        </a>
-      </div>
-      <!-- right changelog image -->
-      <img src="./images/imgplus.png" alt="changelog image" class="image">
-    </div>
-  </section>
-
-  <!-- plus features section -->
-  <section class="plus-features">
-    <div class="container">
-      <div class="content">
-        <h1 class="text-2xl leading-tight font-black uppercase">
-         2. PLUS Version
-        </h1>
-        <p class="text-lg my-10">
-          Plus version contains more than 90+ lockscreens, and headerclocks,qsshapes.
-          which can be applied on one click,moduleless support etc.
-        </p>
-<p class="text-lg my-10">
-⍚ supports ksu and magisk
-        </p>
-        <!-- join community button -->
-        <a href="https://play.google.com/store/apps/details?id=com.rei.subs">
-          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-            Check Here
-          </button>
-        </a>
-        
-     
-  </section>
-
-
-  <!-- changelog section -->
-  <section class="changelog">
-    <div class="container">
-      <img src="./images/mono.png" alt="hero image" class="image">
-      <div class="content">
-        <h1 class="text-2xl leading-tight font-black uppercase">
-         3. Mono Version
-        </h1>
-        <p class="text-lg my-10">
-          Mono version contains minimal clocks which gives an minimal feel to the lockscreens.
-          which can be applied within the app.
-        </p>
-<p class="text-lg my-10">
- ⍚ supports ksu and magisk
-        </p>
-        <!-- join community button -->
-         <a href="https://play.google.com/store/apps/details?id=com.rei.mono">
-          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-            Check Here
-          </button>
-        </a>
-      </div>
-      </div>
-      <!-- right plus features image -->
-      <img src="./images/feature1.png" alt="plus features image" class="image">
-    </div>
-    
-    
-  </section>
-
-
-
-  <!-- awesome setups section -->
-  <section class="awesome-setups">
-    <div class="container">
-      <div class="content">
-        <h1 class="text-2xl leading-tight font-black uppercase">
-          Be updated
-        </h1>
-        <p class="text-lg my-10">
-          Get new updates about REI and  awesome custom setups & previews of WaifuClock and other themes...
-        </p>
-        <!-- join community button -->
-        <a href="https://telegram.me/weebo_setup">
-          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-            Join Channel
-          </button>
-        </a>
-      </div>
-      <!-- right awesome setups image -->
-      <img src="./images/feature3.png" alt="awesome setups image" class="image">
-    </div>
-  </section>
-
-  <!-- previews section -->
-  <section class="previews">
-    <div class="container">
-      <div class="content">
-        <h1 class="text-2xl leading-tight font-black uppercase">
-         previews
-        </h1>
-        <p class="text-lg my-10">
-          Check previews of custom lockscreens, qsshapes  & HeaderClocks. 
-          due to recent telegrph ban previews are available on channel
-        </p>
-        <!-- join community button -->
-        <a href="https://telegram.me/weebo_setup/1137">
-          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-            Previews
-          </button>
-        </a>
-      </div>
-      <!-- right previews image -->
-      <img src="./images/feature2.png" alt="previews image" class="image">
-    </div>
-  </section>
-
-  <!-- help needed section -->
-  <section class="help-needed">
-    <div class="container">
-      <div class="content">
-        <h1 class="text-2xl leading-tight font-black uppercase">
-          Support needed !
-        </h1>
-        <p class="text-lg my-10">
-          REI (aka Waifu-Clock) now has an Support group, that helps to fix many problems.
-          use notes on support group for more details
-        </p>
-        <!-- join community button -->
-        <a href="https://telegram.me/weebo_setup">
-          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-            Join now
-          </button>
-        </a>
-      </div>
-      
-      <!-- right help needed image -->
-    
-  </section>
-
-<!-- stats section -->
-<div class="card" style="display: flex; flex-direction: column; align-items: center;">
-  <h1 class="text-1xl leading-tight font-black uppercase" style="margin-bottom: 20px;">
-    Things to note
-  </h1>
-  <div class="Button" style="display: flex; flex-direction: column; align-items: center;">
-    <a href="https://telegra.ph/NOTICE-02-12">
-      <button type="button" class="uppercase text-sm font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-        How to use
-      </button>
-    </a>
-
-    <a href="https://youtube.com/playlist?list=PLLt9lQ48rfZVYUpqZEXwh2M4A4PwB-2KS">
-      <button type="button" class="uppercase text-sm font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-       TUTORIALS
-      </button>
-    </a>
-
-    <a href="/pages/terms.html">
-      <button type="button" class="uppercase text-sm font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-        Terms & c.
-      </button>
-    </a>
-    <a href="/pages/features.html">
-      <button type="button" class="uppercase text-sm font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-        Features
-      </button>
-    </a>
+    <img src="images/hero-image.png" alt="Hero Image" class="image">
   </div>
-</div>
-
-  
-
- 
-
- 
-
-  <!-- contact section -->
-  <section class="contact">
-    <div class="container">
-      <div class="content">
-        <img src="./images/member2.png" alt="" class="image">
-        <h2 class="text-5xl leading-tight font-black uppercase"></h2>
-        <p class="text-lg my-10">Contact me for more details</p>
-        <a href="https://telegra.ph/Credits-07-19">
-          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-            Credits
-          </button>
-        </a>
-        <a href="https://telegram.me/hyp3r_sh">
-          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-            Maintainer
-          </button>
-        </a>
-      </div>
-
+  <div id="changelog" class="changelog">
+    <div class="content">
+      <h2>Changelog</h2>
+      <p>See what's new in the latest update of the ReiVerse.</p>
+      <button>Read More</button>
     </div>
-  </section>
-
-  
-
-
+    <img src="images/changelog-image.png" alt="Changelog Image" class="image">
+  </div>
+  <div id="plus-features" class="plus-features">
+    <div class="content">
+      <h2>Plus Features</h2>
+      <p>Unlock additional features with ReiVerse Plus.</p>
+      <button>Learn More</button>
+    </div>
+    <img src="images/plus-features-image.png" alt="Plus Features Image" class="image">
+  </div>
+  <div id="awesome-setups" class="awesome-setups">
+    <div class="content">
+      <h2>Awesome Setups</h2>
+      <p>Explore amazing setups from the ReiVerse community.</p>
+      <button>Discover</button>
+    </div>
+    <img src="images/awesome-setups-image.png" alt="Awesome Setups Image" class="image">
+  </div>
+  <div id="previews" class="previews">
+    <div class="content">
+      <h2>Previews</h2>
+      <p>Get a sneak peek at upcoming features in the ReiVerse.</p>
+      <button>Preview Now</button>
+    </div>
+    <img src="images/previews-image.png" alt="Previews Image" class="image">
+  </div>
+  <div id="help-needed" class="help-needed">
+    <div class="content">
+      <h2>Help Needed</h2>
+      <p>We are always looking for contributors. Join us!</p>
+      <button>Join Now</button>
+    </div>
+    <img src="images/help-needed-image.png" alt="Help Needed Image" class="image">
+  </div>
+  <div id="stats" class="stats">
+    <div class="content">
+      <h2>Stats</h2>
+      <p>Check out the latest stats and milestones in the ReiVerse.</p>
+      <button>View Stats</button>
+    </div>
+    <img src="images/stats-image.png" alt="Stats Image" class="image">
+  </div>
+  <div id="contact" class="contact">
+    <div class="content">
+      <h2>Contact Us</h2>
+      <p>Have questions? Get in touch with our team.</p>
+      <button>Contact Us</button>
+    </div>
+    <img src="images/contact-image.png" alt="Contact Image" class="image">
+  </div>
 </body>
 </html>
