@@ -2,455 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="output.css">
-  <link rel="stylesheet" href="./Bhanu.css">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2031700534603729" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="images/favicon.png">
   <title>Enter the ReiVerse</title>
   <style>
-    /* Global styles */
-    html {
-      scroll-behavior: smooth;
-    }
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.5;
-      background-color: #f5f5f5;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 15px;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      background-color: #f1f1f1;
     }
 
-    .cont {
-      display: flex;
-      background-image: url("/images/purpleblur.png");
-      background-size: cover;
-      background-color: rgba(255, 255, 255, 0.5); /* Fallback background color */
-      backdrop-filter: blur(10px);
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    /* Navigation menu */
+    /* Navigation */
     nav {
-      padding: 12px 0;
-      background-color: #6200ea;
-      color: white;
-    }
-    nav .logo {
-      text-align: center;
-    }
-    nav .logo h1 {
-      font-size: 32px;
-      font-weight: 900;
-      margin-bottom: 5px;
-    }
-    nav .logo h2 {
-      font-size: 18px;
-      margin: 0;
-    }
-    nav .menu {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 15px;
-    }
-    nav .menu a {
-      text-decoration: none;
+      padding: 10px 20px;
+      background-color: #b00020;
       color: white;
-      font-weight: bold;
-      margin-left: 10px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    /* Hero section */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 50px 20px;
-      background-color: #bb86fc;
-      color: white;
-    }
-    .hero .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .hero .content h2 {
-      font-size: 42px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .hero .content p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    .hero .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #03dac5;
-      color: #6200ea;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    .hero .content button:hover {
-      background-color: #018786;
-      transform: scale(1.1);
-    }
-    .hero .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-
-    /* Changelog section */
-    .changelog {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 50px 20px;
-      background-color: #3700b3;
-      color: white;
-    }
-    .changelog .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .changelog .content h2 {
-      font-size: 42px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .changelog .content p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    .changelog .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #03dac5;
-      color: #3700b3;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    .changelog .content button:hover {
-      background-color: #018786;
-      transform: scale(1.1);
-    }
-    .changelog .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-
-    /* Other sections styled similarly */
-    /* Plus Features section */
-    .plus-features {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 50px 20px;
-      background-color: #03dac6;
-      color: #6200ea;
-    }
-    .plus-features .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .plus-features .content h2 {
-      font-size: 42px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .plus-features .content p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    .plus-features .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #6200ea;
-      color: #03dac5;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    .plus-features .content button:hover {
-      background-color: #3700b3;
-      transform: scale(1.1);
-    }
-    .plus-features .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-
-    /* Awesome Setups section */
-    .awesome-setups {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 50px 20px;
-      background-color: #bb86fc;
-      color: #3700b3;
-    }
-    .awesome-setups .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .awesome-setups .content h2 {
-      font-size: 42px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .awesome-setups .content p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    .awesome-setups .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #03dac5;
-      color: #bb86fc;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    .awesome-setups .content button:hover {
-      background-color: #018786;
-      transform: scale(1.1);
-    }
-    .awesome-setups .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-
-    /* Previews section */
-    .previews {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 50px 20px;
-      background-color: #6200ea;
-      color: #03dac6;
-    }
-    .previews .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .previews .content h2 {
-      font-size: 42px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .previews .content p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    .previews .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #03dac5;
-      color: #6200ea;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    .previews .content button:hover {
-      background-color: #018786;
-      transform: scale(1.1);
-    }
-    .previews .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-
-    /* Help Needed section */
-    .help-needed {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 50px 20px;
-      background-color: #3700b3;
-      color: white;
-    }
-    .help-needed .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .help-needed .content h2 {
-      font-size: 42px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .help-needed .content p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    .help-needed .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #03dac5;
-      color: #3700b3;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    .help-needed .content button:hover {
-      background-color: #018786;
-      transform: scale(1.1);
-    }
-    .help-needed .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-
-    /* Stats section */
-    .stats {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 50px 20px;
-      background-color: #bb86fc;
-      color: #6200ea;
-    }
-    .stats .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .stats .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #03dac5;
-      color: #bb86fc;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    .stats .content button:hover {
-      background-color: #018786;
-      transform: scale(1.1);
-    }
-    .stats .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-
-    /* Contact section */
-    .contact {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 50px 20px;
-      background-color: #6200ea;
-      color: white;
-    }
-    .contact .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .contact .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #03dac5;
-      color: #6200ea;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    .contact .content button:hover {
-      background-color: #018786;
-      transform: scale(1.1);
-    }
-    .contact .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-
-    .card {
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 20px;
-      background-image: url("/images/purpleblur.png");
-      background-size: cover;
-      background-color: rgba(255, 255, 255, 0.5); /* Fallback background color */
-      backdrop-filter: blur(10px);
-      width: 300px;
-      margin: 0 auto;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+    nav .logo h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    nav .menu {
+      display: flex;
+      gap: 15px;
+    }
+    nav .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+    nav .menu a:hover {
+      color: #ffcccb;
+    }
 
+    /* Section Styles */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #b00020;
+    }
+    section p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    section button {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: #b00020;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    section button:hover {
+      background-color: #ff1744;
+      transform: scale(1.1);
+    }
+    section img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+
+    /* Fade-in Animation */
     @keyframes fade-in {
       to {
         opacity: 1;
       }
     }
 
-    /* Responsive design */
+    /* Responsive Design */
     @media (max-width: 768px) {
       nav .menu {
         flex-direction: column;
+        gap: 10px;
       }
-      .hero, .changelog, .plus-features, .awesome-setups, .previews, .help-needed, .stats, .contact {
-        padding: 30px 15px;
+      section h2 {
+        font-size: 24px;
       }
-      .hero .content h2, .changelog .content h2, .plus-features .content h2, .awesome-setups .content h2, .previews .content h2, .help-needed .content h2 {
-        font-size: 32px;
+      section p {
+        font-size: 16px;
       }
-      .hero .content p, .changelog .content p, .plus-features .content p, .awesome-setups .content p, .previews .content p, .help-needed .content p {
+      section button {
         font-size: 16px;
       }
     }
@@ -460,7 +114,6 @@
   <nav>
     <div class="logo">
       <h1>Enter the ReiVerse</h1>
-      <h2>Your Journey Begins Here</h2>
     </div>
     <div class="menu">
       <a href="#hero">Home</a>
@@ -473,69 +126,77 @@
       <a href="#contact">Contact</a>
     </div>
   </nav>
-  <div id="hero" class="hero">
+
+  <section id="hero">
     <div class="content">
       <h2>Welcome to the ReiVerse</h2>
       <p>Discover the limitless possibilities and embark on your journey in the ReiVerse.</p>
       <button>Get Started</button>
     </div>
-    <img src="images/hero-image.png" alt="Hero Image" class="image">
-  </div>
-  <div id="changelog" class="changelog">
+    <img src="images/hero-image.png" alt="Hero Image">
+  </section>
+
+  <section id="changelog">
     <div class="content">
       <h2>Changelog</h2>
       <p>See what's new in the latest update of the ReiVerse.</p>
       <button>Read More</button>
     </div>
-    <img src="images/changelog-image.png" alt="Changelog Image" class="image">
-  </div>
-  <div id="plus-features" class="plus-features">
+    <img src="images/changelog-image.png" alt="Changelog Image">
+  </section>
+
+  <section id="plus-features">
     <div class="content">
       <h2>Plus Features</h2>
       <p>Unlock additional features with ReiVerse Plus.</p>
       <button>Learn More</button>
     </div>
-    <img src="images/plus-features-image.png" alt="Plus Features Image" class="image">
-  </div>
-  <div id="awesome-setups" class="awesome-setups">
+    <img src="images/plus-features-image.png" alt="Plus Features Image">
+  </section>
+
+  <section id="awesome-setups">
     <div class="content">
       <h2>Awesome Setups</h2>
       <p>Explore amazing setups from the ReiVerse community.</p>
       <button>Discover</button>
     </div>
-    <img src="images/awesome-setups-image.png" alt="Awesome Setups Image" class="image">
-  </div>
-  <div id="previews" class="previews">
+    <img src="images/awesome-setups-image.png" alt="Awesome Setups Image">
+  </section>
+
+  <section id="previews">
     <div class="content">
       <h2>Previews</h2>
       <p>Get a sneak peek at upcoming features in the ReiVerse.</p>
       <button>Preview Now</button>
     </div>
-    <img src="images/previews-image.png" alt="Previews Image" class="image">
-  </div>
-  <div id="help-needed" class="help-needed">
+    <img src="images/previews-image.png" alt="Previews Image">
+  </section>
+
+  <section id="help-needed">
     <div class="content">
       <h2>Help Needed</h2>
       <p>We are always looking for contributors. Join us!</p>
       <button>Join Now</button>
     </div>
-    <img src="images/help-needed-image.png" alt="Help Needed Image" class="image">
-  </div>
-  <div id="stats" class="stats">
+    <img src="images/help-needed-image.png" alt="Help Needed Image">
+  </section>
+
+  <section id="stats">
     <div class="content">
       <h2>Stats</h2>
       <p>Check out the latest stats and milestones in the ReiVerse.</p>
       <button>View Stats</button>
     </div>
-    <img src="images/stats-image.png" alt="Stats Image" class="image">
-  </div>
-  <div id="contact" class="contact">
+    <img src="images/stats-image.png" alt="Stats Image">
+  </section>
+
+  <section id="contact">
     <div class="content">
       <h2>Contact Us</h2>
       <p>Have questions? Get in touch with our team.</p>
       <button>Contact Us</button>
     </div>
-    <img src="images/contact-image.png" alt="Contact Image" class="image">
-  </div>
+    <img src="images/contact-image.png" alt="Contact Image">
+  </section>
 </body>
 </html>
