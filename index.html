@@ -24,7 +24,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 10px 20px;
-      background-color: #b00020;
+      background-color: var(--primary-color);
       color: white;
       position: fixed;
       width: 100%;
@@ -47,7 +47,12 @@
       transition: color 0.3s ease;
     }
     nav .menu a:hover {
-      color: #ffcccb;
+      color: var(--hover-color);
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
     }
 
     /* Section Styles */
@@ -59,7 +64,7 @@
     section h2 {
       font-size: 32px;
       margin-bottom: 20px;
-      color: #b00020;
+      color: var(--primary-color);
     }
     section p {
       font-size: 18px;
@@ -70,7 +75,7 @@
       font-size: 18px;
       font-weight: bold;
       padding: 10px 20px;
-      background-color: #b00020;
+      background-color: var(--primary-color);
       color: white;
       border: none;
       border-radius: 30px;
@@ -78,7 +83,7 @@
       transition: background-color 0.3s ease, transform 0.3s ease;
     }
     section button:hover {
-      background-color: #ff1744;
+      background-color: var(--hover-color);
       transform: scale(1.1);
     }
     section img {
@@ -107,7 +112,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        background-color: #b00020;
+        background-color: var(--primary-color);
         position: absolute;
         top: 60px;
         width: 100%;
@@ -116,8 +121,6 @@
       }
       nav .menu-toggle {
         display: block;
-        font-size: 24px;
-        cursor: pointer;
       }
       section {
         padding: 60px 10px;
@@ -139,6 +142,7 @@
     <div class="logo">
       <h1>Enter the ReiVerse</h1>
     </div>
+    <div class="menu-toggle">☰</div>
     <div class="menu">
       <a href="#hero">Home</a>
       <a href="#changelog">Changelog</a>
@@ -149,7 +153,6 @@
       <a href="#stats">Stats</a>
       <a href="#contact">Contact</a>
     </div>
-    <div class="menu-toggle">☰</div>
   </nav>
 
   <section id="hero">
@@ -229,6 +232,23 @@
       const menu = document.querySelector('.menu');
       menu.classList.toggle('mobile');
     });
+
+    // Pastel color palette
+    const pastelColors = [
+      { primary: '#FFB3BA', hover: '#FFDFE0' },
+      { primary: '#FFDFBA', hover: '#FFE8CC' },
+      { primary: '#FFFFBA', hover: '#FFFFCC' },
+      { primary: '#BAFFC9', hover: '#DFFFEB' },
+      { primary: '#BAE1FF', hover: '#CCEFFF' }
+    ];
+
+    function setRandomPastelColors() {
+      const randomColor = pastelColors[Math.floor(Math.random() * pastelColors.length)];
+      document.documentElement.style.setProperty('--primary-color', randomColor.primary);
+      document.documentElement.style.setProperty('--hover-color', randomColor.hover);
+    }
+
+    setRandomPastelColors();
   </script>
 </body>
 </html>
