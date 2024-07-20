@@ -99,8 +99,28 @@
     /* Responsive Design */
     @media (max-width: 768px) {
       nav .menu {
+        display: none;
         flex-direction: column;
         gap: 10px;
+      }
+      nav .menu.mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #b00020;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        left: 0;
+        padding: 10px 0;
+      }
+      nav .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      section {
+        padding: 60px 10px;
       }
       section h2 {
         font-size: 24px;
@@ -129,6 +149,7 @@
       <a href="#stats">Stats</a>
       <a href="#contact">Contact</a>
     </div>
+    <div class="menu-toggle">☰</div>
   </nav>
 
   <section id="hero">
@@ -202,5 +223,12 @@
     </div>
     <img src="images/contact-image.png" alt="Contact Image">
   </section>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      const menu = document.querySelector('.menu');
+      menu.classList.toggle('mobile');
+    });
+  </script>
 </body>
 </html>
