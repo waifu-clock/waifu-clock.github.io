@@ -60,6 +60,43 @@
       color: var(--accent-color);
     }
 
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: var(--text-color);
+      margin: 4px;
+      transition: 0.3s;
+    }
+
+    .menu.mobile {
+      display: none;
+      flex-direction: column;
+      background-color: var(--secondary-color);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      padding: 20px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu.mobile a {
+      padding: 10px 20px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .menu.mobile a:hover {
+      background-color: var(--primary-color);
+    }
+
     /* Section Styles */
     section {
       padding: 100px 20px;
@@ -113,9 +150,16 @@
 
     /* Responsive Design */
     @media (max-width: 768px) {
-      nav .menu {
-        flex-direction: column;
-        gap: 10px;
+      .menu {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .menu.mobile {
+        display: flex;
       }
 
       section h2 {
@@ -147,6 +191,21 @@
       <a href="#stats">Stats</a>
       <a href="#contact">Contact</a>
     </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="menu mobile">
+      <a href="#hero">Home</a>
+      <a href="#changelog">Changelog</a>
+      <a href="#plus-features">Plus Features</a>
+      <a href="#awesome-setups">Awesome Setups</a>
+      <a href="#previews">Previews</a>
+      <a href="#help-needed">Help Needed</a>
+      <a href="#stats">Stats</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
   <section id="hero">
@@ -155,7 +214,7 @@
       <p>Discover the limitless possibilities and embark on your journey in the ReiVerse.</p>
       <button>Get Started</button>
     </div>
-    <img src="images/hero-image.png" alt="Hero Image">
+    <img data-src="images/hero-image.png" alt="Hero Image">
   </section>
 
   <section id="changelog">
@@ -164,7 +223,7 @@
       <p>See what's new in the latest update of the ReiVerse.</p>
       <button>Read More</button>
     </div>
-    <img src="images/changelog-image.png" alt="Changelog Image">
+    <img data-src="images/changelog-image.png" alt="Changelog Image">
   </section>
 
   <section id="plus-features">
@@ -173,7 +232,7 @@
       <p>Unlock additional features with ReiVerse Plus.</p>
       <button>Learn More</button>
     </div>
-    <img src="images/plus-features-image.png" alt="Plus Features Image">
+    <img data-src="images/plus-features-image.png" alt="Plus Features Image">
   </section>
 
   <section id="awesome-setups">
@@ -182,7 +241,7 @@
       <p>Explore amazing setups from the ReiVerse community.</p>
       <button>Discover</button>
     </div>
-    <img src="images/awesome-setups-image.png" alt="Awesome Setups Image">
+    <img data-src="images/awesome-setups-image.png" alt="Awesome Setups Image">
   </section>
 
   <section id="previews">
@@ -191,7 +250,7 @@
       <p>Get a sneak peek at upcoming features in the ReiVerse.</p>
       <button>Preview Now</button>
     </div>
-    <img src="images/previews-image.png" alt="Previews Image">
+    <img data-src="images/previews-image.png" alt="Previews Image">
   </section>
 
   <section id="help-needed">
@@ -200,7 +259,7 @@
       <p>We are always looking for contributors. Join us!</p>
       <button>Join Now</button>
     </div>
-    <img src="images/help-needed-image.png" alt="Help Needed Image">
+    <img data-src="images/help-needed-image.png" alt="Help Needed Image">
   </section>
 
   <section id="stats">
@@ -209,7 +268,7 @@
       <p>Check out the latest stats and milestones in the ReiVerse.</p>
       <button>View Stats</button>
     </div>
-    <img src="images/stats-image.png" alt="Stats Image">
+    <img data-src="images/stats-image.png" alt="Stats Image">
   </section>
 
   <section id="contact">
@@ -218,11 +277,15 @@
       <p>Have questions? Get in touch with our team.</p>
       <button>Contact Us</button>
     </div>
-    <img src="images/contact-image.png" alt="Contact Image">
+    <img data-src="images/contact-image.png" alt="Contact Image">
   </section>
 
   <script>
-    // Function to dynamically load images
+    function toggleMenu() {
+      const menu = document.querySelector('.menu.mobile');
+      menu.classList.toggle('open');
+    }
+
     function loadImages() {
       const images = document.querySelectorAll('img');
       images.forEach(img => {
@@ -234,7 +297,6 @@
       });
     }
 
-    // Load images on DOM content loaded
     document.addEventListener('DOMContentLoaded', loadImages);
   </script>
 </body>
