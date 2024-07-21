@@ -159,6 +159,11 @@
       }
 
       .menu.mobile {
+        display: none;
+        flex-direction: column;
+      }
+
+      .menu.mobile.open {
         display: flex;
       }
 
@@ -297,7 +302,7 @@
       });
     }
 
-    document.addEventListener('DOMContentLoaded', loadImages);
+    window.addEventListener('load', loadImages);
   </script>
 </body>
 </html>
