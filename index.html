@@ -95,19 +95,24 @@
       transition: all 0.3s ease;
     }
 
-    section h2 {
+    .initial-page {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      text-align: center;
+    }
+
+    .initial-page h2 {
       font-size: 32px;
       margin-bottom: 20px;
       color: var(--accent-color);
     }
 
-    section p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      color: var(--text-color);
-    }
-
-    section button {
+    .initial-page button {
       font-size: 18px;
       font-weight: bold;
       padding: 10px 20px;
@@ -119,9 +124,17 @@
       transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
-    section button:hover {
+    .initial-page button:hover {
       background-color: var(--secondary-color);
       transform: scale(1.1);
+    }
+
+    .second-page {
+      display: none;
+    }
+
+    .second-page.active {
+      display: block;
     }
 
     section img {
@@ -132,7 +145,6 @@
       animation: fade-in 1s forwards;
     }
 
-    /* Fade-in Animation */
     @keyframes fade-in {
       to {
         opacity: 1;
@@ -194,82 +206,86 @@
     </div>
   </nav>
 
-  <section id="hero">
-    <div class="content">
-      <h2>Welcome to the ReiVerse</h2>
-      <p>Discover the limitless possibilities and embark on your journey in the ReiVerse.</p>
-      <button>Get Started</button>
-    </div>
-    <img data-src="images/hero-image.png" alt="Hero Image">
-  </section>
+  <div class="initial-page">
+    <h2>Welcome to the ReiVerse</h2>
+    <p>Discover the limitless possibilities and embark on your journey in the ReiVerse.</p>
+    <button onclick="showSecondPage()">Get Started</button>
+  </div>
 
-  <section id="changelog">
-    <div class="content">
-      <h2>Changelog</h2>
-      <p>See what's new in the latest update of the ReiVerse.</p>
-      <button>Read More</button>
-    </div>
-    <img data-src="images/changelog-image.png" alt="Changelog Image">
-  </section>
+  <div class="second-page">
+    <section id="changelog">
+      <div class="content">
+        <h2>Changelog</h2>
+        <p>See what's new in the latest update of the ReiVerse.</p>
+        <button>Read More</button>
+      </div>
+      <img data-src="images/changelog-image.png" alt="Changelog Image">
+    </section>
 
-  <section id="plus-features">
-    <div class="content">
-      <h2>Plus Features</h2>
-      <p>Unlock additional features with ReiVerse Plus.</p>
-      <button>Learn More</button>
-    </div>
-    <img data-src="images/plus-features-image.png" alt="Plus Features Image">
-  </section>
+    <section id="plus-features">
+      <div class="content">
+        <h2>Plus Features</h2>
+        <p>Unlock additional features with ReiVerse Plus.</p>
+        <button>Learn More</button>
+      </div>
+      <img data-src="images/plus-features-image.png" alt="Plus Features Image">
+    </section>
 
-  <section id="awesome-setups">
-    <div class="content">
-      <h2>Awesome Setups</h2>
-      <p>Explore amazing setups from the ReiVerse community.</p>
-      <button>Discover</button>
-    </div>
-    <img data-src="images/awesome-setups-image.png" alt="Awesome Setups Image">
-  </section>
+    <section id="awesome-setups">
+      <div class="content">
+        <h2>Awesome Setups</h2>
+        <p>Explore amazing setups from the ReiVerse community.</p>
+        <button>Discover</button>
+      </div>
+      <img data-src="images/awesome-setups-image.png" alt="Awesome Setups Image">
+    </section>
 
-  <section id="previews">
-    <div class="content">
-      <h2>Previews</h2>
-      <p>Get a sneak peek at upcoming features in the ReiVerse.</p>
-      <button>Preview Now</button>
-    </div>
-    <img data-src="images/previews-image.png" alt="Previews Image">
-  </section>
+    <section id="previews">
+      <div class="content">
+        <h2>Previews</h2>
+        <p>Get a sneak peek at upcoming features in the ReiVerse.</p>
+        <button>Preview Now</button>
+      </div>
+      <img data-src="images/previews-image.png" alt="Previews Image">
+    </section>
 
-  <section id="help-needed">
-    <div class="content">
-      <h2>Help Needed</h2>
-      <p>We are always looking for contributors. Join us!</p>
-      <button>Join Now</button>
-    </div>
-    <img data-src="images/help-needed-image.png" alt="Help Needed Image">
-  </section>
+    <section id="help-needed">
+      <div class="content">
+        <h2>Help Needed</h2>
+        <p>We are always looking for contributors. Join us!</p>
+        <button>Join Now</button>
+      </div>
+      <img data-src="images/help-needed-image.png" alt="Help Needed Image">
+    </section>
 
-  <section id="stats">
-    <div class="content">
-      <h2>Stats</h2>
-      <p>Check out the latest stats and milestones in the ReiVerse.</p>
-      <button>View Stats</button>
-    </div>
-    <img data-src="images/stats-image.png" alt="Stats Image">
-  </section>
+    <section id="stats">
+      <div class="content">
+        <h2>Stats</h2>
+        <p>Check out the latest stats and milestones in the ReiVerse.</p>
+        <button>View Stats</button>
+      </div>
+      <img data-src="images/stats-image.png" alt="Stats Image">
+    </section>
 
-  <section id="contact">
-    <div class="content">
-      <h2>Contact Us</h2>
-      <p>Have questions? Get in touch with our team.</p>
-      <button>Contact Us</button>
-    </div>
-    <img data-src="images/contact-image.png" alt="Contact Image">
-  </section>
+    <section id="contact">
+      <div class="content">
+        <h2>Contact Us</h2>
+        <p>Have questions? Get in touch with our team.</p>
+        <button>Contact Us</button>
+      </div>
+      <img data-src="images/contact-image.png" alt="Contact Image">
+    </section>
+  </div>
 
   <script>
     function toggleMenu() {
       const menu = document.querySelector('.menu.mobile');
       menu.classList.toggle('open');
+    }
+
+    function showSecondPage() {
+      document.querySelector('.initial-page').style.display = 'none';
+      document.querySelector('.second-page').classList.add('active');
     }
 
     function loadImages() {
@@ -287,3 +303,4 @@
   </script>
 </body>
 </html>
+
