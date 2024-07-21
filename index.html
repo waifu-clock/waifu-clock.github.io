@@ -40,10 +40,14 @@
       transition: background-color 0.3s;
       justify-content: center;
       text-align: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
     }
 
-    nav.hidden {
-      display: none;
+    nav.visible {
+      opacity: 1;
+      visibility: visible;
     }
 
     nav .logo {
@@ -80,6 +84,10 @@
       padding: 20px 0;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       z-index: 1000;
+    }
+
+    .menu.mobile.open {
+      display: flex;
     }
 
     .menu.mobile a {
@@ -138,10 +146,13 @@
 
     .second-page {
       display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
 
     .second-page.active {
       display: block;
+      opacity: 1;
     }
 
     section img {
@@ -209,7 +220,7 @@
   </style>
 </head>
 <body>
-  <nav class="hidden">
+  <nav id="toolbar">
     <div class="hamburger" onclick="toggleMenu()">
       <div></div>
       <div></div>
@@ -237,7 +248,7 @@
   </div>
 
   <div class="second-page">
-    <nav>
+    <nav id="toolbar">
       <div class="logo">
         Enter the ReiVerse
       </div>
@@ -290,7 +301,7 @@
     <section id="stats">
       <div class="content">
         <h2>Stats</h2>
-        <p>Check out the latest stats and milestones in the ReiVerse.</p>
+        <p>Check out the latest statistics and data from the ReiVerse.</p>
         <button>View Stats</button>
       </div>
       <img data-src="images/stats-image.png" alt="Stats Image">
@@ -299,7 +310,7 @@
     <section id="contact">
       <div class="content">
         <h2>Contact Us</h2>
-        <p>Have questions? Get in touch with our team.</p>
+        <p>Get in touch with us for any inquiries or feedback.</p>
         <button>Contact Us</button>
       </div>
       <img data-src="images/contact-image.png" alt="Contact Us Image">
@@ -317,7 +328,7 @@
       document.querySelector('.initial-page').style.visibility = 'hidden';
       document.querySelector('.second-page').style.opacity = '1';
       document.querySelector('.second-page').style.visibility = 'visible';
-      document.querySelector('nav').classList.remove('hidden');
+      document.querySelector('nav').classList.add('visible');
     }
 
     function loadImages() {
