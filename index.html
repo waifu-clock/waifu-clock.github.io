@@ -37,23 +37,9 @@
       top: 0;
       z-index: 1000;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s;
       justify-content: center;
       text-align: center;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
-
-    nav.visible {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    nav .logo {
-      font-size: 24px;
-      font-weight: bold;
-      flex: 1;
+      transition: background-color 0.3s;
     }
 
     .hamburger {
@@ -103,13 +89,7 @@
       background-color: var(--primary-color);
     }
 
-    /* Section Styles */
-    section {
-      padding: 100px 20px;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
+    /* Initial Page Styles */
     .initial-page {
       display: flex;
       justify-content: center;
@@ -144,15 +124,50 @@
       transform: scale(1.1);
     }
 
+    /* Second Page Styles */
     .second-page {
-      display: none;
       opacity: 0;
-      transition: opacity 0.3s ease;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+      position: relative;
+      height: 100vh;
     }
 
-    .second-page.active {
-      display: block;
+    .second-page.visible {
       opacity: 1;
+      visibility: visible;
+    }
+
+    .second-page .content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .second-page .content h2 {
+      font-size: 24px;
+      color: var(--text-color);
+    }
+
+    .second-page .content p {
+      font-size: 18px;
+      color: var(--text-color);
+    }
+
+    .second-page .content button {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: var(--button-color);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .second-page .content button:hover {
+      background-color: var(--button-hover-color);
+      transform: scale(1.1);
     }
 
     section img {
@@ -167,23 +182,6 @@
       to {
         opacity: 1;
       }
-    }
-
-    .second-page button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: var(--button-color);
-      color: white;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .second-page button:hover {
-      background-color: var(--button-hover-color);
-      transform: scale(1.1);
     }
 
     /* Responsive Design */
@@ -205,15 +203,23 @@
         display: flex;
       }
 
-      section h2 {
+      .initial-page h2 {
         font-size: 24px;
       }
 
-      section p {
+      .initial-page button {
         font-size: 16px;
       }
 
-      section button {
+      .second-page .content h2 {
+        font-size: 20px;
+      }
+
+      .second-page .content p {
+        font-size: 16px;
+      }
+
+      .second-page .content button {
         font-size: 16px;
       }
     }
@@ -253,66 +259,52 @@
         Enter the ReiVerse
       </div>
     </nav>
-    <section id="changelog">
-      <div class="content">
-        <h2>Changelog</h2>
-        <p>See what's new in the latest update of the ReiVerse.</p>
-        <button>Read More</button>
-      </div>
+    <section id="changelog" class="content">
+      <h2>Changelog</h2>
+      <p>See what's new in the latest update of the ReiVerse.</p>
+      <button>Read More</button>
       <img data-src="images/changelog-image.png" alt="Changelog Image">
     </section>
 
-    <section id="plus-features">
-      <div class="content">
-        <h2>Plus Features</h2>
-        <p>Unlock additional features with ReiVerse Plus.</p>
-        <button>Learn More</button>
-      </div>
+    <section id="plus-features" class="content">
+      <h2>Plus Features</h2>
+      <p>Unlock additional features with ReiVerse Plus.</p>
+      <button>Learn More</button>
       <img data-src="images/plus-features-image.png" alt="Plus Features Image">
     </section>
 
-    <section id="awesome-setups">
-      <div class="content">
-        <h2>Awesome Setups</h2>
-        <p>Explore amazing setups from the ReiVerse community.</p>
-        <button>Discover</button>
-      </div>
+    <section id="awesome-setups" class="content">
+      <h2>Awesome Setups</h2>
+      <p>Explore amazing setups from the ReiVerse community.</p>
+      <button>Discover</button>
       <img data-src="images/awesome-setups-image.png" alt="Awesome Setups Image">
     </section>
 
-    <section id="previews">
-      <div class="content">
-        <h2>Previews</h2>
-        <p>Get a sneak peek at upcoming features in the ReiVerse.</p>
-        <button>Preview Now</button>
-      </div>
+    <section id="previews" class="content">
+      <h2>Previews</h2>
+      <p>Get a sneak peek at upcoming features in the ReiVerse.</p>
+      <button>Preview Now</button>
       <img data-src="images/previews-image.png" alt="Previews Image">
     </section>
 
-    <section id="help-needed">
-      <div class="content">
-        <h2>Help Needed</h2>
-        <p>We are always looking for contributors. Join us!</p>
-        <button>Join Now</button>
-      </div>
+    <section id="help-needed" class="content">
+      <h2>Help Needed</h2>
+      <p>We are always looking for contributors. Join us!</p>
+      <button>Join Now</button>
       <img data-src="images/help-needed-image.png" alt="Help Needed Image">
     </section>
 
-    <section id="stats">
-      <div class="content">
-        <h2>Stats</h2>
-        <p>Check out the latest statistics and data from the ReiVerse.</p>
-        <button>View Stats</button>
-      </div>
+    <section id="stats" class="content">
+      <h2>Stats</h2>
+      <p>Check out the latest statistics and data from the ReiVerse.</p>
+      <button>View Stats</button>
       <img data-src="images/stats-image.png" alt="Stats Image">
     </section>
 
-    <section id="contact">
-      <div class="content">
-        <h2>Contact Us</h2>
-        <p>Get in touch with us for any inquiries or feedback.</p>
-        <button>Contact Us</button>
-      </div>
+    <section id="contact" class="content">
+      <h2>Contact Us</h2>
+      <p>Get in touch with us for any inquiries or feedback.</p>
+      <button>Contact Us</button>
       <img data-src="images/contact-image.png" alt="Contact Us Image">
     </section>
   </div>
@@ -324,11 +316,13 @@
     }
 
     function showSecondPage() {
-      document.querySelector('.initial-page').style.opacity = '0';
-      document.querySelector('.initial-page').style.visibility = 'hidden';
-      document.querySelector('.second-page').style.opacity = '1';
-      document.querySelector('.second-page').style.visibility = 'visible';
-      document.querySelector('nav').classList.add('visible');
+      const initialPage = document.querySelector('.initial-page');
+      const secondPage = document.querySelector('.second-page');
+
+      initialPage.style.opacity = '0';
+      initialPage.style.visibility = 'hidden';
+
+      secondPage.classList.add('visible');
     }
 
     function loadImages() {
