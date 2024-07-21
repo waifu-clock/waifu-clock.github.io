@@ -37,6 +37,7 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       transition: background-color 0.3s;
       justify-content: center;
+      text-align: center;
     }
 
     nav .logo {
@@ -44,13 +45,12 @@
       font-weight: bold;
     }
 
-    /* Hamburger Menu */
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
       position: absolute;
-      right: 20px;
+      left: 20px;
       top: 15px;
     }
 
@@ -174,13 +174,13 @@
 </head>
 <body>
   <nav>
-    <div class="logo">
-      Enter the ReiVerse
-    </div>
     <div class="hamburger" onclick="toggleMenu()">
       <div></div>
       <div></div>
       <div></div>
+    </div>
+    <div class="logo">
+      Enter the ReiVerse
     </div>
     <div class="menu mobile">
       <a href="#hero">Home</a>
