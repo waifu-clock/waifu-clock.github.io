@@ -26,7 +26,6 @@
     /* Navigation */
     nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       padding: 15px 20px;
       background-color: var(--secondary-color);
@@ -37,27 +36,12 @@
       z-index: 1000;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       transition: background-color 0.3s;
+      justify-content: center;
     }
 
-    nav .logo h1 {
-      margin: 0;
+    nav .logo {
       font-size: 24px;
-    }
-
-    nav .menu {
-      display: flex;
-      gap: 15px;
-    }
-
-    nav .menu a {
-      color: var(--text-color);
-      text-decoration: none;
-      font-size: 16px;
-      transition: color 0.3s;
-    }
-
-    nav .menu a:hover {
-      color: var(--accent-color);
+      font-weight: bold;
     }
 
     /* Hamburger Menu */
@@ -65,6 +49,9 @@
       display: none;
       flex-direction: column;
       cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 15px;
     }
 
     .hamburger div {
@@ -79,18 +66,22 @@
       display: none;
       flex-direction: column;
       background-color: var(--secondary-color);
-      position: absolute;
+      position: fixed;
       top: 60px;
       left: 0;
       right: 0;
       padding: 20px 0;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
     }
 
     .menu.mobile a {
       padding: 10px 20px;
       width: 100%;
       text-align: left;
+      color: var(--text-color);
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     .menu.mobile a:hover {
@@ -184,17 +175,7 @@
 <body>
   <nav>
     <div class="logo">
-      <h1>Enter the ReiVerse</h1>
-    </div>
-    <div class="menu">
-      <a href="#hero">Home</a>
-      <a href="#changelog">Changelog</a>
-      <a href="#plus-features">Plus Features</a>
-      <a href="#awesome-setups">Awesome Setups</a>
-      <a href="#previews">Previews</a>
-      <a href="#help-needed">Help Needed</a>
-      <a href="#stats">Stats</a>
-      <a href="#contact">Contact</a>
+      Enter the ReiVerse
     </div>
     <div class="hamburger" onclick="toggleMenu()">
       <div></div>
