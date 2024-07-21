@@ -230,7 +230,7 @@
   </style>
 </head>
 <body>
-  <nav id="toolbar">
+  <nav id="toolbar" style="display: none;">
     <div class="hamburger" onclick="toggleMenu()">
       <div></div>
       <div></div>
@@ -293,8 +293,8 @@
 
     <section id="help-needed" class="content">
       <h2>Help Needed</h2>
-      <p>We are always looking for contributors. Join us!</p>
-      <button>Join Now</button>
+      <p>Find out how you can contribute to the ReiVerse project.</p>
+      <button>Get Involved</button>
       <img data-src="images/help-needed-image.png" alt="Help Needed Image">
     </section>
 
@@ -328,6 +328,7 @@
 
       setTimeout(() => {
         initialPage.style.display = 'none';
+        document.getElementById('toolbar').style.display = 'block';
         secondPage.classList.add('visible');
       }, 500); // Match the animation duration
     }
