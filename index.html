@@ -10,6 +10,8 @@
       --secondary-color: #fff2e6;
       --accent-color: #ff9999;
       --text-color: #333333;
+      --button-color: #ff9999;
+      --button-hover-color: #ffcccc;
     }
 
     body {
@@ -40,9 +42,14 @@
       text-align: center;
     }
 
+    nav.hidden {
+      display: none;
+    }
+
     nav .logo {
       font-size: 24px;
       font-weight: bold;
+      flex: 1;
     }
 
     .hamburger {
@@ -116,7 +123,7 @@
       font-size: 18px;
       font-weight: bold;
       padding: 10px 20px;
-      background-color: var(--accent-color);
+      background-color: var(--button-color);
       color: white;
       border: none;
       border-radius: 30px;
@@ -125,7 +132,7 @@
     }
 
     .initial-page button:hover {
-      background-color: var(--secondary-color);
+      background-color: var(--button-hover-color);
       transform: scale(1.1);
     }
 
@@ -149,6 +156,23 @@
       to {
         opacity: 1;
       }
+    }
+
+    .second-page button {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: var(--button-color);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .second-page button:hover {
+      background-color: var(--button-hover-color);
+      transform: scale(1.1);
     }
 
     /* Responsive Design */
@@ -185,7 +209,7 @@
   </style>
 </head>
 <body>
-  <nav>
+  <nav class="hidden">
     <div class="hamburger" onclick="toggleMenu()">
       <div></div>
       <div></div>
@@ -213,6 +237,11 @@
   </div>
 
   <div class="second-page">
+    <nav>
+      <div class="logo">
+        Enter the ReiVerse
+      </div>
+    </nav>
     <section id="changelog">
       <div class="content">
         <h2>Changelog</h2>
@@ -273,7 +302,7 @@
         <p>Have questions? Get in touch with our team.</p>
         <button>Contact Us</button>
       </div>
-      <img data-src="images/contact-image.png" alt="Contact Image">
+      <img data-src="images/contact-image.png" alt="Contact Us Image">
     </section>
   </div>
 
@@ -284,18 +313,17 @@
     }
 
     function showSecondPage() {
-      document.querySelector('.initial-page').style.display = 'none';
-      document.querySelector('.second-page').classList.add('active');
+      document.querySelector('.initial-page').style.opacity = '0';
+      document.querySelector('.initial-page').style.visibility = 'hidden';
+      document.querySelector('.second-page').style.opacity = '1';
+      document.querySelector('.second-page').style.visibility = 'visible';
+      document.querySelector('nav').classList.remove('hidden');
     }
 
     function loadImages() {
-      const images = document.querySelectorAll('img');
+      const images = document.querySelectorAll('img[data-src]');
       images.forEach(img => {
-        const src = img.getAttribute('data-src');
-        if (src) {
-          img.src = src;
-          img.onload = () => img.style.opacity = '1';
-        }
+        img.src = img.getAttribute('data-src');
       });
     }
 
@@ -303,4 +331,3 @@
   </script>
 </body>
 </html>
-
