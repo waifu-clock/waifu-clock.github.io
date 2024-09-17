@@ -2,13 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+    background-color: var(--bg);
 }
 
 :root {
@@ -21,7 +15,6 @@
     min-height: 100vh;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: var(--bg);
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -48,18 +41,12 @@
 .menu-icon {
     width: 25px;
     cursor: pointer;
-    display: block;
-    margin-right: 5px;
+    display: none;
     transition: .2s;
 }
 
 .menu-icon:hover {
     width: 30px;
-}
-
-#menuList {
-    animation: fadeInGirl .5s linear;
-    background-color: transparent;
 }
 
 nav {
@@ -103,7 +90,7 @@ nav ul li a:hover {
 .heading {
     text-align: left;
     width: 100%;
-    margin-left: 60px;
+    margin-left: 80px;
     background-color: transparent;
     position: relative;
 }
@@ -134,8 +121,7 @@ nav ul li a:hover {
         margin-left: -50px;
         background-color: transparent;
     }
-
-    100% {
+    100%{
         opacity: 1;
         background-color: transparent;
     }
@@ -147,8 +133,7 @@ nav ul li a:hover {
         margin-left: 50px;
         background-color: transparent;
     }
-
-    100% {
+    100%{
         opacity: 1;
         background-color: transparent;
     }
@@ -181,8 +166,7 @@ nav ul li a:hover {
         margin-left: 50px;
         background-color: transparent;
     }
-
-    100% {
+    100%{
         opacity: 1;
         background-color: transparent;
     }
@@ -196,7 +180,7 @@ nav ul li a:hover {
 }
 
 .girl {
-
+    
     animation: fadeInGirl .5s linear;
     justify-content: end;
     display: block;
@@ -215,8 +199,7 @@ nav ul li a:hover {
         margin-right: -30px;
         background-color: transparent;
     }
-
-    100% {
+    100%{
         opacity: 1;
         background-color: transparent;
     }
@@ -242,7 +225,7 @@ nav ul li a:hover {
         display: block;
         margin-right: 20px;
     }
-
+    
     nav ul {
         position: absolute;
         top: 65px;
@@ -255,7 +238,7 @@ nav ul li a:hover {
 
     nav ul li {
         display: block;
-        margin-top: 15px;
+        margin-top: 20px;
         margin-bottom: 10px;
     }
 
@@ -270,18 +253,16 @@ nav ul li a:hover {
     }
 
     .heading {
-        right: 0px;
         width: 100%;
         text-align: center;
         margin-left: 0px;
-        margin-right: 0px;
     }
 
     .heading h2 {
         animation: fadeIn .5s linear;
         font-size: 42px;
     }
-
+    
     .heading h3 {
         animation: fadeIn .5s linear;
         margin-top: -5px;
@@ -289,15 +270,11 @@ nav ul li a:hover {
     }
 
     .heading p {
-        display: inline-block;
-        text-align: center;
         animation: fadeInP .5s linear;
-        font-size: 16px;
-        margin-top: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
+        font-size: 18px;
+        margin-top: 5.0px;
     }
-
+    
 
     .social {
         justify-content: center;
@@ -322,8 +299,7 @@ nav ul li a:hover {
             margin-right: 30px;
             background-color: transparent;
         }
-
-        100% {
+        100%{
             opacity: 1;
             background-color: transparent;
         }
@@ -346,92 +322,5 @@ nav ul li a:hover {
         animation: fadeInGirl .2s linear;
         background-color: transparent;
         overflow: hidden;
-    }
-}
-
-
-/**Tablet**/
-@media (min-width:641px) {
-
-    /* CSS */
-    .heading {
-        right: 3px;
-        width: 100%;
-        text-align: left;
-        margin-left: 40px;
-    }
-
-    .heading h2 {
-        animation: fadeIn .5s linear;
-        font-size: 46px;
-    }
-
-    .heading h3 {
-        animation: fadeIn .5s linear;
-        margin-top: -5px;
-        font-size: 40px;
-    }
-
-    .heading p {
-        animation: fadeInP .5s linear;
-        font-size: 16px;
-        margin-top: 10px;
-    }
-
-    .girl {
-
-        animation: fadeInGirl .5s linear;
-        justify-content: end;
-        display: block;
-        cursor: pointer;
-        width: 95%;
-        transition: .2s;
-    }
-
-    .girl:hover {
-        width: 100%;
-    }
-}
-
-/**Desktop**/
-@media (min-width:1281px) {
-
-    /* CSS */
-    .heading {
-        right: 3px;
-        width: 100%;
-        text-align: left;
-        margin-left: 50px;
-    }
-
-    .heading h2 {
-        animation: fadeIn .5s linear;
-        font-size: 46px;
-    }
-
-    .heading h3 {
-        animation: fadeIn .5s linear;
-        margin-top: -5px;
-        font-size: 40px;
-    }
-
-    .heading p {
-        animation: fadeInP .5s linear;
-        font-size: 16px;
-        margin-top: 10px;
-    }
-
-    .girl {
-
-        animation: fadeInGirl .5s linear;
-        justify-content: end;
-        display: block;
-        cursor: pointer;
-        width: 135%;
-        transition: .2s;
-    }
-
-    .girl:hover {
-        width: 140%;
     }
 }

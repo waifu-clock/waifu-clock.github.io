@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaeruShi Product</title>
+    <style>
+        * {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --accent: #924642;
+            --bg: #fcedea;
+        }
+
+        .container1 {
+            width: 100%;
+            height: 100vh;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: var(--bg);
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+
+        .title {
+            margin-left: 20px;
+            font-weight: bold;
+
+        }
+
+        .menu-icon {
+            width: 25px;
+            cursor: pointer;
+            display: block;
+            margin-right: 5px;
+            transition: .2s;
+        }
+
+        .menu-icon:hover {
+            width: 30px;
+        }
+
+        #menuList {
+            animation: fadeInGirl .5s linear;
+            background-color: transparent;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: black;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            transition: 0.1s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: white;
+            background-color: var(--accent);
+            padding: 10px;
+            border-radius: 60px;
+        }
+
+        .content {
+            position: relative;
+            height: 100%;
+            left: 50%;
+            top: 8%;
+            overflow: hidden;
+            display: flex;
+            transform: translateY(-50%);
+            transform: translateX(-50%);
+        }
+
+        .variant {
+            justify-content: center;
+            width: 100%;
+            margin-right: 50px;
+            margin-left: 50px;
+
+        }
+
+        .variant img {
+            animation: fadeVariant .9s linear;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            transition: 0.2s;
+        }
+
+        @keyframes fadeVariant {
+            0% {
+                opacity: 0;
+                margin-top: -20px;
+                background-color: transparent;
+            }
+
+            100% {
+                opacity: 1;
+                background-color: transparent;
+            }
+        }
+
+        @keyframes fadeInGirl {
+            0% {
+                opacity: 0;
+                margin-right: -30px;
+                background-color: transparent;
+            }
+
+            100% {
+                opacity: 1;
+                background-color: transparent;
+            }
+        }
+
+        .variant h3 {
+            animation: fadeTitle .9s;
+            text-align: center;
+            margin-top: 0px;
+        }
+
+        .variant p {
+            animation: fadeDesc .9s;
+            padding-left: 25px;
+            padding-right: 25px;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .variant button {
+            background-color: var(--accent);
+            color: white;
+            margin-top: 20px;
+            position: relative;
+            font-size: 16px;
+            left: 50%;
+            border: none;
+            transform: translateX(-50%);
+            padding: 10px 15px;
+            border-radius: 60px;
+            transition: .2s ease-in-out;
+        }
+
+        .variant button:hover {
+            border-radius: 8px;
+        }
+
+        @keyframes fadeTitle {
+            0% {
+                opacity: 0;
+                margin-top: -20px;
+                background-color: transparent;
+            }
+
+            100% {
+                opacity: 1;
+                background-color: transparent;
+            }
+        }
+
+        @keyframes fadeDesc {
+            0% {
+                opacity: 0;
+                margin-top: 70px;
+                background-color: transparent;
+            }
+
+            100% {
+                opacity: 1;
+                background-color: transparent;
+            }
+        }
+
+
+        .container2 {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+        }
+
+        @media only screen and (max-width:700px) {
+            .container1 {
+                width: 100%;
+                height: auto;
+                padding-bottom: 100px;
+                padding-left: 20px;
+                padding-right: 20px;
+                background-color: var(--bg);
+                overflow: hidden;
+                box-sizing: border-box;
+            }
+
+            nav ul {
+                position: absolute;
+                top: 65px;
+                transition: .5s;
+                z-index: 2;
+                right: 0;
+                display: none;
+                width: 100%;
+            }
+
+            nav ul li {
+                display: block;
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+
+            #menuList {
+                animation: fadeInGirl .2s linear;
+                background-color: transparent;
+            }
+
+            .content {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                overflow: scroll;
+                transform: translateY(-50%);
+                transform: translateX(-50%);
+            }
+
+            .variant {
+                justify-content: center;
+                width: 100%;
+                margin-top: 70px;
+                margin-right: 0px;
+                margin-left: 0px;
+
+            }
+
+            .variant img {
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                margin: 0 auto;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+            }
+
+            .variant img:hover {
+                width: 85%;
+            }
+
+            .variant h3 {
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .variant p {
+                text-align: center;
+                margin-top: 15px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .container1 {
+                width: 100%;
+                height: auto;
+                padding-bottom: 100px;
+                padding-left: 20px;
+                padding-right: 20px;
+                background-color: var(--bg);
+                overflow: hidden;
+                box-sizing: border-box;
+            }
+
+            .logo {
+                width: 80px;
+            }
+
+            .menu-icon {
+                width: 30px;
+            }
+
+            .menu-icon:hover {
+                width: 35PX;
+            }
+
+            .title {
+                font-size: 24px;
+            }
+
+            nav ul {
+                position: absolute;
+                top: 65px;
+                transition: .5s;
+                z-index: 2;
+                right: 0;
+                display: none;
+                width: 100%;
+            }
+
+            nav ul li {
+                display: block;
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+
+            nav ul li a {
+                color: black;
+                font-weight: bold;
+                font-size: 24px;
+                text-decoration: none;
+                transition: 0.1s ease-in-out;
+            }
+
+            #menuList {
+                animation: fadeInGirl .2s linear;
+                background-color: transparent;
+            }
+
+            .content {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                overflow: scroll;
+                transform: translateY(-50%);
+                transform: translateX(-50%);
+            }
+
+            .variant {
+                justify-content: center;
+                width: 100%;
+                margin-top: 70px;
+                margin-right: 0px;
+                margin-left: 0px;
+
+            }
+
+            .variant img {
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                margin: 0 auto;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+            }
+
+            .variant img:hover {
+                width: 85%;
+            }
+
+            .variant h3 {
+                font-size: 28px;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .variant p {
+                text-align: center;
+                margin-top: 15px;
+                font-size: 26px;
+            }
+
+            .variant button {
+                font-size: 22px;
+                padding: 15px 20px;
+            }
+        }
+
+        .msg {
+            position: absolute;
+            visibility: hidden;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.7);
+            transform: translateY(-50%);
+            transform: translateX(-50%);
+            top: 0%;
+            left: 50%;
+        }
+
+        .cntnt {
+            position: absolute;
+            text-align: center;
+            width: 20%;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+        }
+
+        .cntnt h2 {
+            flex: 1;
+        }
+
+        .msg p {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            transform: translateX(-50%);
+            text-align: center;
+            width: 20%;
+            margin-top: 40px;
+        }
+    </style>
+    <link rel="icon" href="drawable/logo.png">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="container1">
+        <div class="navbar">
+            <img src="drawable/logo.png" alt="logo" class="logo">
+            <p class="title">Weeabooify</p>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="#">product</a></li>
+                    <li><a href="comis.html">commission</a></li>
+                    <li><a href="about.html">about</a></li>
+                </ul>
+            </nav>
+            <img src="drawable/menu.svg" alt="logo" class="menu-icon" onclick="togglemenu()">
+        </div>
+        <div class="content">
+            <div class="variant">
+                <div class="uwu">
+                    <img src="drawable/uwu.png" alt="test">
+                    <h3>Weeabooify UwU</h3>
+                    <p>Weeabooify UwU is Free Version theme, the overlays are limited. Only support for Android Q,
+                        especially for Nusantara Project and Resurrection Remix.</p>
+                    <button><a style="text-decoration: none; color: white"
+                            href="https://t.me/weeabooify/175">Download</a></button>
+                </div>
+            </div>
+            <div class="variant">
+                <div class="sc">
+                    <img src="drawable/sc.png" alt="test">
+                    <h3>Weeabooify Schicksal</h3>
+                    <p>Weeabooify Schicksal is a substratum theme designed in material design style and anime style,
+                        include QS Panel, Lockscreen, Settings, etc. Support for Android Q.</p>
+                    <button><a style="text-decoration: none; color: white" href="https://t.me/weeabooify/68">Buy
+                            Theme</a></button>
+                </div>
+            </div>
+            <div class="variant">
+                <div class="ae">
+                    <img src="drawable/ae.png" alt="test">
+                    <h3>Weeabooify Anti-Entropy</h3>
+                    <p>Weeabooify Anti-Entropy is a substratum theme designed for Android 12 above which include
+                        Lockscreen, QS Shape, Third-party apps, etc.</p>
+                    <button><a style="text-decoration: none; color: white" href="https://t.me/weeabooify/178">Buy
+                            Theme</a></button>
+                </div>
+            </div>
+        </div>
+        <div id="popup" class="overlay">
+            <div class="msg">
+                <div class="cntnt">
+                    <h2>Previews</h2>
+                    <a href="#">&times;</a>
+                </div>
+                <p>Coming Sooon!</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

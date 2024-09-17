@@ -1,0 +1,339 @@
+/* =====Fonts Resources===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* =====Scrollbar Style===== */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #92464258;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 60px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #c7615c;
+}
+
+/* =====Variable CSS===== */
+:root {
+    --header-height: 5rem;
+
+    /* =====Colors Resources===== */
+    --accent: #924642;
+    --background-light: #fcedea;
+    --background-neutral: #dcd1cf;
+    --text-color: #000000;
+
+    /* =====Fonts Stuff===== */
+    --header-font: 48px;
+    --list-font: 24px;
+    --desc-font: 24px;
+
+}
+
+/* =====Animations===== */
+.reveal {
+    opacity: 0;
+    transition: 2s all ease;
+    transform: translateY(150px);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.float {
+    background-color: var(--background-light);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* =====BASE FRAMEWORK===== */
+* {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden !important;
+    background-color: var(--background-light);
+}
+
+/* Mobile */
+@media only screen and (max-width:767px) {
+
+    /* FRAMEWORK */
+    .container {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .heading {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 8%;
+    }
+
+    .heading h2 {
+        font-size: 40px;
+    }
+
+    .heading h3 {
+        margin-top: -15px;
+        font-size: 40px;
+    }
+
+    .heading p {
+        font-size: 18px;
+    }
+
+    .heading span {
+        color: var(--accent);
+    }
+
+    .social {
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .social img {
+        width: 50px;
+        transition: .2s;
+    }
+
+    .social img:hover {
+        transform: translateY(-20%);
+        width: 50px;
+    }
+
+    .girl {
+        display: none;
+    }
+
+    /* Header */
+    nav {
+        background-color: var(--background-light);
+        width: 100%;
+        overflow: hidden;
+        position: fixed;
+        z-index: 2;
+    }
+
+    .header {
+        padding-inline: 20px;
+        padding-bottom: 30px;
+        padding-top: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .header p {
+        flex: 1;
+        margin-left: 10px;
+    }
+
+    .header .logo-icon {
+        width: 50px;
+    }
+
+    .header .menu {
+        width: 20px;
+    }
+
+    /* Menu List */
+
+    #myTab {
+        position: relative;
+        height: 0rem;
+        width: 100%;
+        margin-top: -10px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        gap: 5px;
+        transition: .2s;
+        opacity: 0;
+    }
+
+    #myTab.show {
+        z-index: 10;
+        background-color: var(--background-light);
+        box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        height: 4rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        gap: 5px;
+        opacity: 1;
+    }
+
+    ul li {
+        position: relative;
+        bottom: 0;
+        list-style: none;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: var(--text-color);
+        transition: .3s;
+        padding: 6px 10px;
+    }
+
+    ul li a:hover {
+        color: white;
+        background-color: var(--accent);
+        border-radius: 60px;
+    }
+
+    /* Home Container */
+    .home-content {
+        padding-top: 10%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Product Container */
+    .product-content {
+        padding-top: 10%;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-content .content {
+        width: 100%;
+        display: flex;
+        padding-left: 30px;
+        padding-right: 30px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .content button {
+        font-size: 16px;
+        margin-top: 20px;
+        background-color: var(--accent);
+        border-radius: 60px;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+    }
+
+    .content button:hover {
+        animation-name: bounce;
+    }
+
+    .product-content .sub-logo {
+        width: 70%;
+    }
+
+    /* UwU */
+    .product-content .uwu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Schicksal */
+    .product-content .sc {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Anti-Entropy */
+    .product-content .ae {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Commissions Container */
+    .commis-content {
+        padding-top: 10%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* About Container */
+    .about-content {
+        padding-top: 10%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Footer Container */
+    footer {
+        padding: 20px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--background-neutral);
+    }
+
+    footer h2  {
+        font-size: 22px;
+    }
+}

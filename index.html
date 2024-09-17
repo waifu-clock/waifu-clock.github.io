@@ -1,885 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="output.css">
-  <link rel="stylesheet" href="./Bhanu.css">
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2031700534603729"
-     crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="images/favicon.png">
-  <title>Enter the ReiVerse </title>
-<section class="hero">
-  <div class="cont">
-    <div class="content">
-    
-     
-    
-    </div>
-  </div>
-</section>
-  <style>
-    /* Global styles */
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.5;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-
-    .cont {
-  display: flex;
-  background-image: url("/images/purpleblur.png");
-  background-size: cover;
-  background-color: rgba(255, 255, 255, 0.5); /* Fallback background color */
-  backdrop-filter: blur(10px);
-}
-
-
-    /* Navigation menu */
-    nav {
-      padding: 12px 0;
-    }
-    nav .logo {
-      text-align: center;
-    }
-    nav .logo h1 {
-      font-size: 32px;
-      font-weight: 900;
-      margin-bottom: 5px;
-    }
-    nav .logo h2 {
-      font-size: 18px;
-    }
-    nav .menu {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 15px;
-    }
-    nav .menu a {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-      margin-left: 10px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    /* Hero section */
-    .hero {
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: space-between;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .hero .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .hero .content h2 {
-      font-size: 42px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .hero .content p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    .hero .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #ff69b4;
-      color: #fff;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-    }
-    .hero .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    /* Changelog section */
-    .changelog {
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: space-between;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .changelog .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .changelog .content h2 {
-      font-size: 42px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .changelog .content p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    .changelog .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #ff69b4;
-      color: #fff;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-    }
-    .changelog .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    /* Plus Features section */
-    .plus-features {
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: space-between;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .plus-features .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .plus-features .content h2 {
-      font-size: 42px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .plus-features .content p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    .plus-features .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #ff69b4;
-      color: #fff;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-    }
-    .plus-features .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    /* Awesome Setups section */
-    .awesome-setups {
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: space-between;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .awesome-setups .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .awesome-setups .content h2 {
-      font-size: 42px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .awesome-setups .content p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    .awesome-setups .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #ff69b4;
-      color: #fff;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-    }
-    .awesome-setups .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    /* Previews section */
-    .previews {
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: space-between;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .previews .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .previews .content h2 {
-      font-size: 42px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .previews .content p {
-      font-size:18px;
-      margin-bottom: 20px;
-    }
-    .previews .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #ff69b4;
-      color: #fff;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-    }
-    .previews .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    /* Help needed!? section */
-    .help-needed {
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: space-between;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .help-needed .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .help-needed .content h2 {
-      font-size: 42px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .help-needed .content p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    .help-needed .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #ff69b4;
-      color: #fff;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-    }
-    .help-needed .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    /* Stats section */
-    .stats {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .stats .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .stats .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #ff69b4;
-      color: #fff;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-    }
-    .stats .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    /* Contact section */
-    .contact {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .card {
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 20px;
-      background-image: url("/images/purpleblur.png");
-      background-size: cover;
-      background-color: rgba(255, 255, 255, 0.5); /* Fallback background color */
-      backdrop-filter: blur(10px);
-      width: 300px;
-      margin: 0 auto;
-
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-.spinner {
-    background: url(data:image/png;base64,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) no-repeat center;
-    display: block;
-    margin: 5% auto;
-    position: relative;
-    width: 159px;
-    height: 59px;
-}
-@-webkit-keyframes pulse {
- 0% {
- opacity: 0;
- background-position: center top;
- -moz-background-size: 0 auto;
- -o-background-size: 0 auto;
- -webkit-background-size: 0 auto;
- background-size: 0 auto;
-}
- 10% {
- opacity: 0;
-}
- 50% {
- opacity: 1;
- -moz-background-size: 20% auto;
- -o-background-size: 20% auto;
- -webkit-background-size: 20% auto;
- background-size: 20% auto;
-}
- 90% {
- opacity: 0;
-}
- 100% {
- opacity: 0;
- background-position: center bottom;
- -moz-background-size: 0 auto;
- -o-background-size: 0 auto;
- -webkit-background-size: 0 auto;
- background-size: 0 auto;
-}
-}
- @-moz-keyframes pulse {
- 0% {
- opacity: 0;
- background-position: center top;
- -moz-background-size: 0 auto;
- -o-background-size: 0 auto;
- -webkit-background-size: 0 auto;
- background-size: 0 auto;
-}
- 10% {
- opacity: 0;
-}
- 50% {
- opacity: 1;
- -moz-background-size: 20% auto;
- -o-background-size: 20% auto;
- -webkit-background-size: 20% auto;
- background-size: 20% auto;
-}
- 90% {
- opacity: 0;
-}
- 100% {
- opacity: 0;
- background-position: center bottom;
- -moz-background-size: 0 auto;
- -o-background-size: 0 auto;
- -webkit-background-size: 0 auto;
- background-size: 0 auto;
-}
-}
- @-ms-keyframes pulse {
- 0% {
- opacity: 0;
- background-position: center top;
- -moz-background-size: 0 auto;
- -o-background-size: 0 auto;
- -webkit-background-size: 0 auto;
- background-size: 0 auto;
-}
- 10% {
- opacity: 0;
-}
- 50% {
- opacity: 1;
- -moz-background-size: 20% auto;
- -o-background-size: 20% auto;
- -webkit-background-size: 20% auto;
- background-size: 20% auto;
-}
- 90% {
- opacity: 0;
-}
- 100% {
- opacity: 0;
- background-position: center bottom;
- -moz-background-size: 0 auto;
- -o-background-size: 0 auto;
- -webkit-background-size: 0 auto;
- background-size: 0 auto;
-}
-}
- @keyframes pulse {
- 0% {
- opacity: 0;
- background-position: center top;
- -moz-background-size: 0 auto;
- -o-background-size: 0 auto;
- -webkit-background-size: 0 auto;
- background-size: 0 auto;
-}
- 10% {
- opacity: 0;
-}
- 50% {
- opacity: 1;
- -moz-background-size: 20% auto;
- -o-background-size: 20% auto;
- -webkit-background-size: 20% auto;
- background-size: 20% auto;
-}
- 90% {
- opacity: 0;
-}
- 100% {
- opacity: 0;
- background-position: center bottom;
- -moz-background-size: 0 auto;
- -o-background-size: 0 auto;
- -webkit-background-size: 0 auto;
- background-size: 0 auto;
-}
-}
-.scroll-down a {
-	display: block;
-	opacity: 0;
-	-moz-transition: all 0.4s ease;
-	-o-transition: all 0.4s ease;
-	-webkit-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-	line-height: 0;
-	font-size: 0;
-	color: transparent;
-	margin-left: auto;
-	margin-right: auto;
-	-moz-background-size: 0 auto;
-	-o-background-size: 0 auto;
-	-webkit-background-size: 0 auto;
-	background-size: 0 auto;
-	-webkit-animation: pulse 1.5s 0s infinite normal ease forwards;
-	-moz-animation: pulse 1.5s 0s infinite normal ease forwards;
-	-o-animation: pulse 1.5s 0s infinite normal ease forwards;
-	animation: pulse 1.5s 0s infinite normal ease forwards;
-	background-image: url(images/arrow-down.svg);
-	background-repeat: no-repeat;
-}
-.scroll-down a:before, .scroll-down a:after {
-	content: " ";
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-	width: 100%;
-	height: 100%;
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMzAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiMwMTM0NmIiIGQ9Ik0yMS44NSw3LjE2YzAsMC4zMDktMC4xMTgsMC42MTctMC4zNTMsMC44NTNsLTUuNjgxLDUuNjhjLTAuNDcxLDAuNDcxLTEuMjMzLDAuNDcxLTEuNzA0LDBsLTUuNjgxLTUuNjgNCgkJYy0wLjQ3LTAuNDcxLTAuNDctMS4yMzMsMC0xLjcwNGMwLjQ3MS0wLjQ3LDEuMjM0LTAuNDcsMS43MDQsMGw0LjgyOCw0LjgyOGw0LjgyOC00LjgyOGMwLjQ3Mi0wLjQ3LDEuMjM0LTAuNDcsMS43MDQsMA0KCQlDMjEuNzMxLDYuNTQzLDIxLjg1LDYuODUyLDIxLjg1LDcuMTZ6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center top;
-	-moz-background-size: 100% auto;
-	-o-background-size: 100% auto;
-	-webkit-background-size: 100% auto;
-	background-size: 100% auto;
-}
-.scroll-down a:before {
-	-webkit-animation: pulse 1.5s 0.25s infinite normal ease forwards;
-	-moz-animation: pulse 1.5s 0.25s infinite normal ease forwards;
-	-o-animation: pulse 1.5s 0.25s infinite normal ease forwards;
-	animation: pulse 1.5s 0.25s infinite normal ease forwards;
-}
-.scroll-down a:after {
-	-webkit-animation: pulse 1.5s 0.5s infinite normal ease forwards;
-	-moz-animation: pulse 1.5s 0.5s infinite normal ease forwards;
-	-o-animation: pulse 1.5s 0.5s infinite normal ease forwards;
-	animation: pulse 1.5s 0.5s infinite normal ease forwards;
-}
-
-
-    .contact .content {
-      max-width: 600px;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    .contact .content button {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #ff69b4;
-      color: #fff;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-    }
-    .contact .image {
-      max-width: 100%;
-      opacity: 0;
-      animation: fade-in 1s forwards;
-    }
-    /* Footer */
-    footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-    }
-    footer .logo {
-      font-size: 32px;
-      font-weight: 900;
-      margin-bottom: 5px;
-    }
-    footer .menu {
-      display: flex;
-    }
-    footer .menu a {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-      margin-left: 10px;
-    }
-    /* Animations */
-    @keyframes fade-in {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    /* Responsive styles */
-    @media (max-width: 768px) {
-      nav .menu {
-        flex-direction: column;
-      }
-      .hero {
-        flex-direction: column;
-      }
-      .hero .content,
-      .hero .image {
-        max-width: 100%;
-      }
-      .changelog,
-      .plus-features,
-      .awesome-setups,
-      .previews,
-      .help-needed {
-        flex-direction: column;
-      }
-      .changelog .content,
-      .changelog .image,
-      .plus-features .content,
-      .plus-features .image,
-      .awesome-setups .content,
-      .awesome-setups .image,
-      .previews .content,
-      .previews .image,
-      .help-needed .content,
-      .help-needed .image {
-        max-width: 100%;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>KaeruShi</title>
 </head>
-<body class="font-ambit">
-  <!-- navigation menu -->
-  <nav>
-    <div class="container">
-      <div class="logo">
-        <h1> </h1>
-        <h2> </h2>
-        
-      </div>
-    
-    </div>
-  </nav>
 
-  <!-- hero section -->
-  <section class="hero">
-    <div class="cont">
-      <div class="content">
-        <h2 class="text-5xl leading-tight font-black uppercase">
-          
-<span class="text-custom-black">Welcome to</span>
-</h2>
-<h2 class="text-5xl leading-tight font-black uppercase">
-<span class="text-custom-pink">REI-verse</span>
-        </h2>
-        <div class="flex flex-col items-center mt-4">
-          <p class="text-lg mb-4">
-            REI (aka WaifuClock) is one of the Minimal-Japanese-Anime-Manga related Theme Engine. Which gives an art elegant experience to your Lockscreen, HeaderClocks, and Qsshapes.
-          </p>
-          <p class="text-lg mb-4">
-            There are three variants available.
-          </p>
-         
+<body>
+    <div class="spinner" id="spin">
+        <div id="loading"></div>
+    </div>
+    <section>
+        <div class="container" id="home">
+            <nav id="navbar">
+                <div class="header">
+                    <img src="drawable/logo.png" alt="" class="logo-icon">
+                    <p>Weeabooify</p>
+                    <img src="drawable/menu.svg" alt="" class="menu" id="menuBtn" onclick="togglemenu()">
+                </div>
+                <ul id="myTab">
+                    <li><a href="#home" class="links">home</a></li>
+                    <li><a href="#product" class="links">product</a></li>
+                    <li><a href="#commis" class="links">commissions</a></li>
+                    <li><a href="#about" class="links">about</a></li>
+                </ul>
+            </nav>
+
+            <!-- =====Home Container===== -->
+            <div class="home-content">
+                <div class="heading">
+                    <h2 data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000" class="hello">Hello!</h2>
+                    <h3 data-aos="fade-down" data-aos-delay="250" data-aos-duration="1000" class="name">I'm
+                        <span>KaeruShi</span>
+                    </h3>
+                    <p data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000" class="desc">Welcome to my
+                        cozy
+                        indie website  🍂</p>
+                    <div class="social">
+                        <a href="https://t.me/kaerushi" data-aos="fade-left" data-aos-delay="300"
+                            data-aos-duration="1500">
+                            <img src="drawable/Tele.svg" alt="telegram">
+                        </a>
+                        <a href="https://instagram.com/kaerushi_" data-aos="fade-left" data-aos-delay="500"
+                            data-aos-duration="1500">
+                            <img src="drawable/insta.svg" alt="instagram">
+                        </a>
+                        <a href="https://twitter.com/KaeruShi404" data-aos="fade-left" data-aos-delay="700"
+                            data-aos-duration="1500">
+                            <img src="drawable/Twit.svg" alt="twitter">
+                        </a>
+                        <a href="https://facebook.com/farel.user002" data-aos="fade-left" data-aos-delay="900"
+                            data-aos-duration="1500">
+                            <img src="drawable/fb.svg" alt="facebook">
+                        </a>
+                    </div>
+                </div>
+                <div class="mascot" data-aos="fade-down" data-aos-delay="400" data-aos-duration="1200">
+                    <img src="drawable/girl.png" alt="girl" style="transition: .3s;" class="girl">
+                </div>
+            </div>
         </div>
-        <div class="spinner scroll-down"> <a class="animate"></a> </div>
-      
-        <!-- join community button -->
-       
-      </div>
-      
-      
-      
+    </section>
 
-      <!-- right hero image -->
-     
-    </div>
-  </section>
+    <!-- =====Product Container===== -->
+    <section>
+        <div class="product-content" id="product">
+            <h1 class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Substratum Theme</h1>
+            <div class="uwu reveal">
+                <img src="drawable/uwu.png" alt="UwU" class="sub-logo">
+                <div class="content">
+                    <h2>Weeabooify UwU</h2>
+                    <p>Weeabooify UwU is Free Version theme, the overlays are limited. Only support for Android Q,
+                        especially for Nusantara Project and Resurrection Remix.</p>
+                    <button><a style="text-decoration: none; color: white"
+                            href="https://t.me/weeabooify/175">Download</a></button>
+                </div>
+            </div>
 
-  <!-- changelog section -->
-  <section class="changelog">
-    <div class="container">
-      <img src="./images/hero-image.jpg" alt="hero image" class="image">
-      <div class="content">
-        <h1 class="text-2xl leading-tight font-black uppercase">
-         1. PUBLIC Version
-        </h1>
-        <p class="text-lg my-10">
-          Public version has been upgraded.
-          Now supports ksu and A12+.also RUI AND OOS (Depends so try).
-        </p>
-        <!-- join community button -->
-        <a href="https://play.google.com/store/apps/details?id=com.rei.pub">
-          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-            Check Here
-          </button>
-        </a>
-      </div>
-      <!-- right changelog image -->
-      <img src="./images/imgplus.png" alt="changelog image" class="image">
-    </div>
-  </section>
+            <div class="sc reveal">
+                <div class="content">
+                    <h2>Weeabooify Schicksal</h2>
+                    <p>Weeabooify Schicksal is a substratum theme designed in material design style and anime style,
+                        include QS Panel, Lockscreen, Settings, etc. Support for Android Q.</p>
+                    <button><a style="text-decoration: none; color: white" href="https://t.me/weeabooify/68">Buy
+                            Theme</a></button>
+                </div>
+                <img src="drawable/sc.png" alt="Schicksal" class="sub-logo">
+            </div>
+            <div class="ae reveal">
+                <img src="drawable/ae.png" alt="Anti-Entropy" class="sub-logo">
+                <div class="content">
+                    <h2>Weeabooify Anti-Entropy</h2>
+                    <p>Weeabooify Anti-Entropy is a substratum theme designed for Android 12 above which include
+                        Lockscreen, QS Shape, Third-party apps, etc.</p>
+                    <button><a style="text-decoration: none; color: white" href="https://t.me/weeabooify/178">Buy
+                            Theme</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- plus features section -->
-  <section class="plus-features">
-    <div class="container">
-      <div class="content">
-        <h1 class="text-2xl leading-tight font-black uppercase">
-         2. PLUS Version
-        </h1>
-        <p class="text-lg my-10">
-          Plus version contains more than 90+ lockscreens, and headerclocks,qsshapes.
-          which can be applied on one click,moduleless support etc.
-        </p>
-<p class="text-lg my-10">
-⍚ supports ksu and magisk
-        </p>
-        <!-- join community button -->
-        <a href="https://play.google.com/store/apps/details?id=com.rei.subs">
-          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-            Check Here
-          </button>
-        </a>
-        
-     
-  </section>
+    <!-- Commissions Container  -->
+    <section>
+        <div id="commis">
+            <h1 class="title" data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000">Illustration Commissions
+            </h1>
+            <div class="commis-content">
+                <div class="commis-info">
+                    <h3 data-aos="fade-down" data-aos-delay="250" data-aos-duration="1000" class="name">About this
+                        <span>Gig</span>
+                    </h3>
+                    <p data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000" class="desc"><span>Hi
+                            There! I will draw anime character for you, describe the character you want and reference
+                            picture.</span><span
+                            style="font-weight: bold; margin-block:15px ; font-size: 22px;">Do:</span><span>- Anime
+                            Character</span><span>- Original Character</span><span>- Game Character</span><span>- Female
+                            Only</span><span
+                            style="font-weight: bold; margin-block:15px ; font-size: 22px;">Don't</span><span>- Detailed
+                            Char</span><span>- NSFW</span><span>- Furry</span><span>- Male</span><span>- Mecha</span>
+                    </p>
+                </div>
+                <div class="commis-variant" data-aos="fade-down" data-aos-delay="350" data-aos-duration="1500" >
+                    <div class="commis-variant-a">
+                        <div class="variant">
+                            <img src="drawable/logo.png" alt="">
+                            <h3>Headshot</h3>
+                            <p>Price $5/50K</p>
+                            <button>Order Now</button>
+                        </div>
+                        <div class="variant">
+                            <img src="drawable/logo.png" alt="">
+                            <h3>Bust Up</h3>
+                            <p>Price $10/100K</p>
+                            <button>Order Now</button>
+                        </div>
+                    </div>
+                    <div class="commis-variant-b">
+                        <div class="variant">
+                            <img src="drawable/logo.png" alt="">
+                            <h3>Tight Up</h3>
+                            <p>Price $15/120K</p>
+                            <button>Order Now</button>
+                        </div>
+                        <div class="variant">
+                            <img src="drawable/logo.png" alt="">
+                            <h3>Full Body</h3>
+                            <p>Price $20/180K</p>
+                            <button>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- =====About Container===== -->
+    <section>
+        <div class="about-content" id="about">
+            <div class="heading">
+                <h3 data-aos="fade-down" data-aos-delay="250" data-aos-duration="1000" class="name">About
+                    <span>Me</span>
+                </h3>
+                <p data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000" class="desc">Hello everyone! My
+                    name is Farel Ardiansyah, I live in Central Java, Indonesia. My hobbies are programming and doing some
+                    cozy stuffs like drawing and theming.</p>
+                <div class="social">
+                    <a href="https://t.me/kaerushi" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1500">
+                        <img src="drawable/Tele.svg" alt="telegram">
+                    </a>
+                    <a href="https://instagram.com/kaerushi_" data-aos="fade-left" data-aos-delay="500"
+                        data-aos-duration="1500">
+                        <img src="drawable/insta.svg" alt="instagram">
+                    </a>
+                    <a href="https://twitter.com/KaeruShi404" data-aos="fade-left" data-aos-delay="700"
+                        data-aos-duration="1500">
+                        <img src="drawable/Twit.svg" alt="twitter">
+                    </a>
+                    <a href="https://facebook.com/farel.user002" data-aos="fade-left" data-aos-delay="900"
+                        data-aos-duration="1500">
+                        <img src="drawable/fb.svg" alt="facebook">
+                    </a>
+                </div>
+            </div>
+            <div class="mascot" data-aos="fade-down" data-aos-delay="400" data-aos-duration="1200">
+                <img src="drawable/girl.png" alt="girl" style="transition: .3s;" class="girl">
+            </div>
+            <div class="up" data-aos="fade-down">
+                <a href="#home"><img src="drawable/arrow-small-right.svg" alt=""></a>
+            </div>
+        </div>
+    </section>
 
-  <!-- changelog section -->
-  <section class="changelog">
-    <div class="container">
-      <img src="./images/mono.png" alt="hero image" class="image">
-      <div class="content">
-        <h1 class="text-2xl leading-tight font-black uppercase">
-         3. Mono Version
-        </h1>
-        <p class="text-lg my-10">
-          Mono version contains minimal clocks which gives an minimal feel to the lockscreens.
-          which can be applied within the app.
-        </p>
-<p class="text-lg my-10">
- ⍚ supports ksu and magisk
-        </p>
-        <!-- join community button -->
-         <a href="https://play.google.com/store/apps/details?id=com.rei.mono">
-          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-            Check Here
-          </button>
-        </a>
-      </div>
-      </div>
-      <!-- right plus features image -->
-      <img src="./images/feature1.png" alt="plus features image" class="image">
-    </div>
-    
-    
-  </section>
+    <!-- Footer Container -->
+    <footer>
+        <h3>Weeabooify  |  © 2022  Kaerushi</h3>
+    </footer>
 
-
-
-  <!-- awesome setups section -->
-  <section class="awesome-setups">
-    <div class="container">
-      <div class="content">
-        <h1 class="text-2xl leading-tight font-black uppercase">
-          Be updated
-        </h1>
-        <p class="text-lg my-10">
-          Get new updates about REI and  awesome custom setups & previews of WaifuClock and other themes...
-        </p>
-        <!-- join community button -->
-        <a href="https://telegram.me/weebo_setup">
-          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-            Join Channel
-          </button>
-        </a>
-      </div>
-      <!-- right awesome setups image -->
-      <img src="./images/feature3.png" alt="awesome setups image" class="image">
-    </div>
-  </section>
-
-  <!-- previews section -->
-  <section class="previews">
-    <div class="container">
-      <div class="content">
-        <h1 class="text-2xl leading-tight font-black uppercase">
-         previews
-        </h1>
-        <p class="text-lg my-10">
-          Check previews of custom lockscreens, qsshapes  & HeaderClocks. 
-          due to recent telegrph ban previews are available on channel
-        </p>
-        <!-- join community button -->
-        <a href="https://telegram.me/weebo_setup/1137">
-          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-            Previews
-          </button>
-        </a>
-      </div>
-      <!-- right previews image -->
-      <img src="./images/feature2.png" alt="previews image" class="image">
-    </div>
-  </section>
-
-  <!-- help needed section -->
-  <section class="help-needed">
-    <div class="container">
-      <div class="content">
-        <h1 class="text-2xl leading-tight font-black uppercase">
-          Support needed !
-        </h1>
-        <p class="text-lg my-10">
-          REI (aka Waifu-Clock) now has an Support group, that helps to fix many problems.
-          use notes on support group for more details
-        </p>
-        <!-- join community button -->
-        <a href="https://telegram.me/weebo_setup">
-          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-            Join now
-          </button>
-        </a>
-      </div>
-      
-      <!-- right help needed image -->
-    
-  </section>
-
-<!-- stats section -->
-<div class="card" style="display: flex; flex-direction: column; align-items: center;">
-  <h1 class="text-1xl leading-tight font-black uppercase" style="margin-bottom: 20px;">
-    Things to note
-  </h1>
-  <div class="Button" style="display: flex; flex-direction: column; align-items: center;">
-    <a href="https://telegra.ph/NOTICE-02-12">
-      <button type="button" class="uppercase text-sm font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-        How to use
-      </button>
-    </a>
-
-    <a href="https://youtube.com/playlist?list=PLLt9lQ48rfZVYUpqZEXwh2M4A4PwB-2KS">
-      <button type="button" class="uppercase text-sm font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-       TUTORIALS
-      </button>
-    </a>
-
-    <a href="/pages/terms.html">
-      <button type="button" class="uppercase text-sm font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-        Terms & c.
-      </button>
-    </a>
-    <a href="/pages/features.html">
-      <button type="button" class="uppercase text-sm font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-        Features
-      </button>
-    </a>
-  </div>
-</div>
-
-  
-
- 
-
- 
-
-  <!-- contact section -->
-  <section class="contact">
-    <div class="container">
-      <div class="content">
-        <img src="./images/member2.png" alt="" class="image">
-        <h2 class="text-5xl leading-tight font-black uppercase"></h2>
-        <p class="text-lg my-10">Contact me for more details</p>
-        <a href="https://telegra.ph/Credits-07-19">
-          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-            Credits
-          </button>
-        </a>
-        <a href="https://telegram.me/hyp3r_sh">
-          <button type="button" class="uppercase text-lg font-bold px-6 py-4 bg-custom-pink text-white rounded-lg outline-[3px] outline-custom-pink mb-6 md:mr-6 md:mb-0">
-            Maintainer
-          </button>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  
-
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        var loader = document.getElementById("spin");
+        window.addEventListener("load", setTimeout(function () {
+            loader.style.display = "none";
+        }, 500))
+    </script>
 </body>
+
 </html>
