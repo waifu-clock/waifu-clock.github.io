@@ -78,7 +78,7 @@
         .torn-paper {
             width: 320px;
             padding: 20px;
-            background: url('/drawable/torn.png') no-repeat center/cover; /* Torn paper background */
+            background: url('drawable/torn.png') no-repeat center/cover; /* Torn paper background */
             border-radius: 5px;
             position: absolute;
             top: 50%;
@@ -115,18 +115,28 @@
             top: 75%;
             left: 50%;
             transform: translateX(-50%);
-            padding: 10px 20px;
-            font-size: 16px;
-            color: white;
-            background: #28a745;
-            border: none;
-            border-radius: 5px;
+            padding: 15px 25px;
+            font-size: 24px;
             cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #000;
+            background-color: #ffbfbf;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
             text-transform: uppercase;
         }
 
-        .open-button:focus {
-            outline: none;
+        .open-button:hover {
+            background-color: #3e8e41;
+        }
+
+        .open-button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
         }
 
         .snow-blast {
