@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowy Present Box</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        h1 {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 3rem;
+            color: #ffdf00;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall 10s linear infinite;
+        }
+
+        @keyframes fall {
+            from {
+                transform: translateY(-10vh);
+            }
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        .present {
+            width: 200px;
+            height: 200px;
+            background: #ff4747;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .present::before,
+        .present::after {
+            content: '';
+            position: absolute;
+            background: #ffd700;
+        }
+
+        .present::before {
+            width: 20px;
+            height: 100%;
+            left: 90px;
+        }
+
+        .present::after {
+            width: 100%;
+            height: 20px;
+            top: 90px;
+        }
+
+        .torn-paper {
+            width: 320px;
+            padding: 20px;
+            background: url('/drawable/torn.png') no-repeat center/cover; /* Torn paper background */
+            border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+            text-align: center;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: tornFadeIn 1.5s ease forwards;
+            animation-play-state: paused;
+        }
+
+        @keyframes tornFadeIn {
+            0% {
+                transform: translate(-50%, -50%) scale(0.5) rotate(-5deg);
+                opacity: 0;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.2) rotate(3deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1) rotate(0);
+                opacity: 1;
+            }
+        }
+
+        .open-button {
+            display: none;
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .open-button:focus {
+            outline: none;
+        }
+
+        .snow-blast {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%);
+            opacity: 0;
+            pointer-events: none;
+            animation: blast 1s ease-out forwards;
+            animation-play-state: paused;
+        }
+
+        @keyframes blast {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Merry Christmas</h1>
+    <div class="snow-container"></div>
+    <div class="present" id="present-box"></div>
+    <div class="snow-blast" id="snow-blast"></div>
+    <div class="torn-paper" id="message-box">PRICES ADJUSTED FOR YOU CHECK NOW</div>
+    <button class="open-button" id="open-button">Open</button>
+
+    <script>
+        // Generate snowflakes across the screen
+        const snowContainer = document.querySelector('.snow-container');
+        for (let i = 0; i < 150; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = Math.random() * 100 + '%';
+            snowflake.style.animationDuration = Math.random() * 3 + 7 + 's';
+            snowflake.style.animationDelay = Math.random() * 5 + 's';
+            snowContainer.appendChild(snowflake);
+        }
+
+        // Present Box Interaction
+        const presentBox = document.getElementById('present-box');
+        const messageBox = document.getElementById('message-box');
+        const openButton = document.getElementById('open-button');
+        const snowBlast = document.getElementById('snow-blast');
+
+        presentBox.addEventListener('click', () => {
+            presentBox.style.display = 'none';
+            snowBlast.style.animationPlayState = 'running';
+            messageBox.style.animationPlayState = 'running';
+
+            setTimeout(() => {
+                openButton.style.display = 'block';
+            }, 1500);
+        });
+
+        openButton.addEventListener('click', () => {
+            window.location.href = 'https://play.google.com/store/apps/dev?id=7402777461504692083';
+        });
+    </script>
+</body>
+</html>
