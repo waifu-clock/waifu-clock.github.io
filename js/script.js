@@ -4,7 +4,28 @@ const nav = document.querySelector('#site-nav');
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const sections = [...document.querySelectorAll('main section[id]')];
 const navLinks = [...nav.querySelectorAll('a')];
+const navTargets = navLinks.map(link => {
+  const destination = new URL(link.getAttribute('href'), window.location.href);
+  return { link, pathname: destination.pathname, hash: destination.hash };
+});
 const isLandingPage = document.querySelector('#home') !== null;
+let activeNavigationKey = '';
+
+document.querySelectorAll([
+  '.section-head',
+  '.about-number',
+  '.about-copy',
+  '.requirements',
+  '.community > .eyebrow',
+  '.community > h2',
+  '.community > p:not(.eyebrow)',
+  '.community .telegram-link',
+  '.release-heading',
+  '.release-guide',
+  '.release-card',
+  '.release-end',
+  '.release-archive'
+].join(',')).forEach(item => item.classList.add('reveal'));
 
 menu.addEventListener('click', () => {
   const isOpen = nav.classList.toggle('open');
@@ -26,34 +47,57 @@ function updateHeaderAndNavigation() {
         activeSection = section.id;
       }
     });
-
-    navLinks.forEach(link => {
-      const destination = new URL(link.getAttribute('href'), window.location.href);
-      const isActive = destination.pathname === window.location.pathname && destination.hash === `#${activeSection}`;
-      link.classList.toggle('active', isActive);
-    });
-    return;
+    setActiveNavigation(`section:${activeSection}`, activeSection);
+  } else {
+    setActiveNavigation(`page:${window.location.pathname}`);
   }
+}
 
-  navLinks.forEach(link => {
-    const destination = new URL(link.getAttribute('href'), window.location.href);
-    link.classList.toggle('active', destination.pathname === window.location.pathname);
+function setActiveNavigation(key, activeSection) {
+  if (key === activeNavigationKey) return;
+  activeNavigationKey = key;
+
+  navTargets.forEach(({ link, pathname, hash }) => {
+    const isActive = isLandingPage
+      ? pathname === window.location.pathname && hash === `#${activeSection}`
+      : pathname === window.location.pathname;
+    if (link.classList.contains('active') !== isActive) {
+      link.classList.toggle('active', isActive);
+    }
   });
 }
 
-window.addEventListener('scroll', updateHeaderAndNavigation, { passive: true });
+let navigationFrame = 0;
+function scheduleHeaderAndNavigationUpdate() {
+  if (navigationFrame) return;
+  navigationFrame = requestAnimationFrame(() => {
+    navigationFrame = 0;
+    updateHeaderAndNavigation();
+  });
+}
+
+window.addEventListener('scroll', scheduleHeaderAndNavigationUpdate, { passive: true });
+window.addEventListener('resize', scheduleHeaderAndNavigationUpdate, { passive: true });
 updateHeaderAndNavigation();
 
 const revealItems = document.querySelectorAll('.reveal');
-if (reduceMotion) {
+const revealIndexes = new Map();
+revealItems.forEach(item => {
+  const parent = item.parentElement;
+  const siblingIndex = revealIndexes.get(parent) || 0;
+  revealIndexes.set(parent, siblingIndex + 1);
+  item.style.setProperty('--reveal-delay', `${Math.min(siblingIndex, 3) * 70}ms`);
+});
+
+if (reduceMotion || !('IntersectionObserver' in window)) {
   revealItems.forEach(item => item.classList.add('visible'));
-} else if ('IntersectionObserver' in window) {
+} else {
   const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
       revealObserver.unobserve(entry.target);
     }
-  }), { threshold: 0.14 });
+  }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
   revealItems.forEach(item => revealObserver.observe(item));
 }
 
