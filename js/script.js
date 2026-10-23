@@ -23,8 +23,7 @@ document.querySelectorAll([
   '.release-heading',
   '.release-guide',
   '.release-card',
-  '.release-end',
-  '.release-archive'
+  '.release-end'
 ].join(',')).forEach(item => item.classList.add('reveal'));
 
 menu.addEventListener('click', () => {

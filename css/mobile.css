@@ -3,6 +3,15 @@ html {
   touch-action: manipulation;
 }
 
+/* Keep changelog touch gestures vertical so cards cannot trigger page zoom. */
+.changelog-page {
+  touch-action: pan-y;
+}
+
+#themes {
+  scroll-margin-top: 76px;
+}
+
 .reveal {
   transition-duration: .52s;
   transition-timing-function: cubic-bezier(.2, .65, .3, 1);
@@ -40,6 +49,10 @@ html {
 }
 
 @media (max-width: 760px) {
+  #themes {
+    scroll-margin-top: 66px;
+  }
+
   .changelog.section {
     width: 100vw;
     max-width: none;
@@ -50,8 +63,7 @@ html {
   .release-heading,
   .release-guide,
   .release-grid,
-  .release-end,
-  .release-archive {
+  .release-end {
     width: 100%;
     min-width: 0;
   }
