@@ -40,6 +40,31 @@ html {
 }
 
 @media (max-width: 760px) {
+  .changelog.section {
+    width: 100vw;
+    max-width: none;
+    margin-inline: 0;
+    padding-inline: max(20px, env(safe-area-inset-left)) max(20px, env(safe-area-inset-right));
+  }
+
+  .release-heading,
+  .release-guide,
+  .release-grid,
+  .release-end,
+  .release-archive {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .release-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .release-card {
+    width: 100%;
+    max-width: none;
+  }
+
   .grain {
     display: none;
   }
