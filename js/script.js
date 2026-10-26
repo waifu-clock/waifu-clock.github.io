@@ -42,6 +42,34 @@ navLinks.forEach(link => link.addEventListener('click', () => {
   menu.setAttribute('aria-expanded', 'false');
 }));
 
+const heroClockTime = document.querySelector('#hero-clock-time');
+const heroClockDate = document.querySelector('#hero-clock-date');
+if (heroClockTime && heroClockDate) {
+  const timeFormatter = new Intl.DateTimeFormat(undefined, {
+    hour: '2-digit',
+    minute: '2-digit',
+    hourCycle: 'h23'
+  });
+  const weekdayFormatter = new Intl.DateTimeFormat(undefined, { weekday: 'long' });
+  const monthDayFormatter = new Intl.DateTimeFormat(undefined, { month: 'short', day: 'numeric' });
+  let clockUpdateTimer;
+
+  function updateHeroClock() {
+    const now = new Date();
+    heroClockTime.textContent = timeFormatter.format(now);
+    heroClockDate.textContent = `${weekdayFormatter.format(now).toUpperCase()} · ${monthDayFormatter.format(now).toUpperCase()}`;
+
+    window.clearTimeout(clockUpdateTimer);
+    const millisecondsUntilNextMinute = (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
+    clockUpdateTimer = window.setTimeout(updateHeroClock, Math.max(1, millisecondsUntilNextMinute));
+  }
+
+  updateHeroClock();
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) updateHeroClock();
+  });
+}
+
 function updateHeaderAndNavigation() {
   header.classList.toggle('scrolled', window.scrollY > 16);
 
