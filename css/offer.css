@@ -1,0 +1,251 @@
+#offer {
+  scroll-margin-top: 76px;
+  padding-top: 92px;
+  padding-bottom: 112px;
+}
+
+.offer-shell {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, .85fr);
+  align-items: center;
+  gap: clamp(28px, 6vw, 84px);
+  min-height: 430px;
+  padding: clamp(32px, 6vw, 76px);
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(115deg, #151426 0%, #11121d 62%, #17162a 100%);
+  border: 1px solid #f6f1eb24;
+}
+
+.offer-shell::before {
+  position: absolute;
+  z-index: -1;
+  top: -210px;
+  right: -140px;
+  width: 560px;
+  aspect-ratio: 1;
+  border: 1px solid #f18ba82e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 42px #f18ba80b, 0 0 0 105px #f18ba807;
+  content: "";
+}
+
+.offer-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.offer h2 {
+  margin: 22px 0 18px;
+  font-size: clamp(48px, 5.5vw, 76px);
+  line-height: .94;
+  letter-spacing: -.065em;
+}
+
+.offer-description {
+  max-width: 380px;
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.offer-pricing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 13px;
+}
+
+.offer-current {
+  color: var(--ink);
+  font: 600 clamp(37px, 4vw, 52px) 'DM Mono', monospace;
+  letter-spacing: -.08em;
+}
+
+.offer-original {
+  color: var(--muted);
+  font: 14px 'DM Mono', monospace;
+}
+
+.offer-discount {
+  padding: 7px 10px;
+  color: #29121d;
+  background: var(--pink);
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.offer-saving {
+  margin: 7px 0 22px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.offer-cta {
+  width: fit-content;
+  min-width: 210px;
+}
+
+.offer-copy > small {
+  display: block;
+  margin-top: 11px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.offer-art {
+  position: relative;
+  display: grid;
+  min-height: 300px;
+  place-items: center;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 40%, #f18ba81c, transparent 58%);
+}
+
+.offer-art-label,
+.offer-art-note {
+  position: absolute;
+  color: #f6f1eb9c;
+  font: 9px 'DM Mono', monospace;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.offer-art-label {
+  top: 10px;
+  left: 4px;
+}
+
+.offer-art-note {
+  right: 4px;
+  bottom: 8px;
+  color: var(--pink);
+}
+
+.offer-art-orbit {
+  position: absolute;
+  width: min(72%, 250px);
+  aspect-ratio: 1;
+  border: 1px solid #f6f1eb25;
+  border-radius: 50%;
+  box-shadow: 0 0 0 24px #f6f1eb08, 0 0 0 62px #f6f1eb05;
+}
+
+.offer-app-icon {
+  position: relative;
+  z-index: 1;
+  width: clamp(108px, 15vw, 156px);
+  aspect-ratio: 1;
+  padding: 9px;
+  background: #ffffff10;
+  border: 1px solid #ffffff24;
+  border-radius: 29%;
+  box-shadow: 0 22px 56px #05050d70;
+  transform: translate(-15px, -7px) rotate(-5deg);
+}
+
+.offer-app-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 23%;
+  object-fit: cover;
+}
+
+.offer-art-price {
+  position: absolute;
+  z-index: 2;
+  right: 2%;
+  bottom: 14%;
+  display: flex;
+  min-width: 174px;
+  flex-direction: column;
+  padding: 15px 18px;
+  background: #11111deF;
+  border: 1px solid #ffffff2c;
+  box-shadow: 0 14px 40px #05050d66;
+  transform: rotate(3deg);
+}
+
+.offer-art-price > span {
+  color: var(--muted);
+  font: 8px 'DM Mono', monospace;
+  letter-spacing: .14em;
+}
+
+.offer-art-price > b {
+  margin: 6px 0 2px;
+  color: var(--pink);
+  font: 600 27px 'DM Mono', monospace;
+  letter-spacing: -.08em;
+}
+
+.offer-art-price > b i {
+  font-size: 11px;
+  font-style: normal;
+  letter-spacing: .08em;
+}
+
+.offer-art-price small {
+  color: var(--muted);
+  font: 10px 'DM Mono', monospace;
+}
+
+.offer-art-price strong {
+  padding: 0 4px;
+  color: var(--pink);
+}
+
+@media (max-width: 760px) {
+  #offer {
+    scroll-margin-top: 66px;
+    padding-top: 72px;
+    padding-bottom: 80px;
+  }
+
+  .offer-shell {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    min-height: 0;
+    padding: 28px 23px 22px;
+  }
+
+  .offer h2 {
+    font-size: clamp(45px, 13vw, 62px);
+  }
+
+  .offer-description {
+    font-size: 15px;
+  }
+
+  .offer-current {
+    font-size: 39px;
+  }
+
+  .offer-art {
+    min-height: 250px;
+  }
+
+  .offer-app-icon {
+    width: 122px;
+  }
+
+  .offer-art-price {
+    right: 2%;
+    bottom: 10%;
+    min-width: 150px;
+    padding: 12px 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .offer-copy.reveal,
+  .offer-art.reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

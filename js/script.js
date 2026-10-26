@@ -13,6 +13,8 @@ let activeNavigationKey = '';
 
 document.querySelectorAll([
   '.section-head',
+  '.offer-copy',
+  '.offer-art',
   '.about-number',
   '.about-copy',
   '.requirements',
