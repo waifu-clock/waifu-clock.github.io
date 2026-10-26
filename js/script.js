@@ -13,6 +13,10 @@ let activeNavigationKey = '';
 
 document.querySelectorAll([
   '.section-head',
+  '.feature-hero-copy',
+  '.feature-hero-art',
+  '.feature-card',
+  '.feature-more',
   '.offer-copy',
   '.offer-art',
   '.about-number',
@@ -114,4 +118,76 @@ if (!reduceMotion && scene && portrait && matchMedia('(pointer:fine)').matches) 
     portrait.style.setProperty('--mx', '0px');
     portrait.style.setProperty('--my', '0px');
   });
+}
+
+document.querySelectorAll('[data-gallery-scroll]').forEach(button => {
+  const rail = document.getElementById(button.dataset.galleryScroll);
+  if (!rail) return;
+
+  button.addEventListener('click', () => {
+    const direction = Number(button.dataset.galleryDirection) || 1;
+    rail.scrollBy({
+      left: direction * Math.max(rail.clientWidth * 0.82, 220),
+      behavior: reduceMotion ? 'auto' : 'smooth'
+    });
+  });
+});
+
+const clockGrid = document.querySelector('[data-clock-grid]');
+if (clockGrid) {
+  const clockTiles = [...clockGrid.querySelectorAll('.clock-tile')];
+  const searchInput = document.querySelector('#clock-gallery-search');
+  const resultCount = document.querySelector('#clock-gallery-result');
+  const emptyState = document.querySelector('#clock-gallery-empty');
+  const lightbox = document.querySelector('#clock-preview');
+  const previewImage = document.querySelector('#clock-preview-image');
+  const previewLabel = document.querySelector('#clock-preview-label');
+  let activeStyle = 1;
+
+  const visibleTiles = () => clockTiles.filter(tile => !tile.hidden);
+
+  function filterClockStyles() {
+    const query = searchInput.value.trim().toLowerCase().replace(/^style\s*/, '');
+    let visible = 0;
+
+    clockTiles.forEach(tile => {
+      const matches = !query || tile.dataset.clockStyle.includes(query) || `style ${parseInt(tile.dataset.clockStyle, 10)}`.includes(query);
+      tile.hidden = !matches;
+      if (matches) visible += 1;
+    });
+
+    resultCount.textContent = `${visible} ${visible === 1 ? 'style' : 'styles'}`;
+    emptyState.hidden = visible !== 0;
+  }
+
+  function showStyle(styleNumber) {
+    const tile = visibleTiles().find(item => Number(item.dataset.clockStyle) === styleNumber);
+    if (!tile) return;
+    const image = tile.querySelector('img');
+    activeStyle = styleNumber;
+    previewImage.src = image.src;
+    previewImage.alt = image.alt;
+    previewLabel.textContent = `Style ${String(styleNumber).padStart(3, '0')}`;
+  }
+
+  clockGrid.addEventListener('click', event => {
+    const tile = event.target.closest('.clock-tile');
+    if (!tile || !lightbox) return;
+    showStyle(Number(tile.dataset.clockStyle));
+    lightbox.showModal();
+  });
+
+  document.querySelectorAll('[data-preview-direction]').forEach(button => {
+    button.addEventListener('click', () => {
+      const styles = visibleTiles().map(tile => Number(tile.dataset.clockStyle));
+      if (!styles.length) return;
+      const current = styles.indexOf(activeStyle);
+      const direction = Number(button.dataset.previewDirection) || 1;
+      const next = (current + direction + styles.length) % styles.length;
+      showStyle(styles[next]);
+    });
+  });
+
+  searchInput.addEventListener('input', filterClockStyles);
+  filterClockStyles();
 }

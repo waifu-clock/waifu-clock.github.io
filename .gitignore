@@ -1,0 +1,3 @@
+# Keep original ADB captures local; the optimized gallery thumbnails are the site assets.
+drawable/showcase/raw/
+drawable/showcase/editor/*.png

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080916">
+  <meta name="description" content="A visual guide to REI's clock creator: build with editable time, date, text, image, shape and widget layers, then tune layout and motion.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="css/clock-editor.css">
+  <link rel="stylesheet" href="css/companions.css">
+  <title>Clock Creator Guide — REI Theme Engine</title>
+</head>
+<body id="top" class="clock-editor-page">
+  <a class="skip-link" href="#main">Skip to clock editor guide</a>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="REI home"><img src="drawable/logo.png" alt=""><span>REI</span><i>THEME ENGINE</i></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><b>Menu</b></button>
+    <nav id="site-nav" aria-label="Primary navigation">
+      <a href="index.html#home">Home</a><a href="features.html">Features</a><a class="active" href="clock-editor.html" aria-current="page">Editor guide</a><a href="clock-gallery.html">Gallery</a><a href="index.html#offer">Offer</a><a href="index.html#themes">Themes</a><a href="changelog.html">Changelog</a><a href="index.html#community">Community</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="clock-editor-hero section" aria-labelledby="clock-editor-title">
+      <div class="clock-editor-hero-copy">
+        <p class="eyebrow"><span></span> REI / CLOCK CREATOR</p>
+        <h1 id="clock-editor-title">Make a clock<br>from <em>little pieces.</em></h1>
+        <p class="clock-editor-lede">The visual editor gives each part of a lockscreen its own layer. Place the time, art, shapes and live widgets on the canvas, then tune how every piece looks and moves.</p>
+        <div class="clock-editor-hero-actions"><a class="button primary" href="features.html">Explore REI features <span>↗</span></a><a class="button text" href="clock-gallery.html">Browse clock styles <span>↓</span></a></div>
+        <div class="editor-tags" aria-label="Clock creator building blocks"><span>TIME &amp; DATE</span><span>TEXT &amp; IMAGE</span><span>SHAPES</span><span>LIVE WIDGETS</span></div>
+      </div>
+      <figure class="editor-shot editor-shot-hero">
+        <div class="editor-phone"><div class="editor-phone-screen"><img src="drawable/showcase/editor/optimized/editor-canvas.jpg" alt="REI clock editor showing an editable lockscreen canvas with a selected artwork layer and tool tray" fetchpriority="high"></div><img class="editor-phone-frame" src="drawable/phone-frame-template.png" alt="" aria-hidden="true"></div>
+        <figcaption><span>01 / THE CANVAS</span> Preview the whole clock while editing one selected layer.</figcaption>
+      </figure>
+    </section>
+
+    <section class="editor-section section" id="elements" aria-labelledby="elements-title">
+      <div class="editor-section-heading">
+        <div><p class="eyebrow"><span></span> BUILDING BLOCKS</p><h2 id="elements-title">Add the pieces<br><em>that make it yours.</em></h2></div>
+        <p>Each item you add becomes a layer on the clock. Start with a time or date field, then mix in artwork, useful information and decoration.</p>
+      </div>
+      <div class="editor-element-grid">
+        <article class="editor-info-card editor-info-time">
+          <span class="editor-index">A / TIME &amp; DATE</span><h3>Choose what the clock says.</h3>
+          <p>Add hours, minutes, seconds, AM/PM, separate digits, day and month names, day numbers or a custom date. Pick the system, 12-hour or 24-hour time format.</p>
+          <div class="editor-token-row"><span>HH</span><span>MM</span><span>DAY</span><span>DATE</span></div>
+        </article>
+        <article class="editor-info-card editor-info-art">
+          <span class="editor-index">B / ART &amp; SHAPES</span><h3>Set the visual language.</h3>
+          <p>Place text, kinetic text, images and shape layers. The shape library includes cards, circles, lines, rings, stars, hearts, arrows and more.</p>
+          <div class="editor-shape-samples" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="editor-info-card editor-info-live">
+          <span class="editor-index">C / LIVE ELEMENTS</span><h3>Keep useful details close.</h3>
+          <p>Add weather text or icons, battery and alarm details, greetings, tasks, music controls, companion layers and saved widget groups.</p>
+          <div class="editor-token-row"><span>WEATHER</span><span>MUSIC</span><span>BATTERY</span></div>
+        </article>
+      </div>
+      <div class="editor-catalog-row">
+        <figure class="editor-shot editor-catalog-shot"><div class="editor-phone"><div class="editor-phone-screen"><img src="drawable/showcase/editor/optimized/editor-add-elements.jpg" alt="The Add Element catalog with time, date, text, image, smart widgets and music controls" loading="lazy" decoding="async"></div><img class="editor-phone-frame" src="drawable/phone-frame-template.png" alt="" aria-hidden="true"></div><figcaption><span>02 / ADD ELEMENTS</span> Browse the clock fields and live content from one catalog.</figcaption></figure>
+        <figure class="editor-shot editor-catalog-shot"><div class="editor-phone"><div class="editor-phone-screen"><img src="drawable/showcase/editor/optimized/editor-shapes.jpg" alt="The shape catalog with geometric, card, glass and decorative shapes" loading="lazy" decoding="async"></div><img class="editor-phone-frame" src="drawable/phone-frame-template.png" alt="" aria-hidden="true"></div><figcaption><span>03 / SHAPE LIBRARY</span> Add a base, divider or accent, then style it on the canvas.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="editor-layers-section section" id="layers" aria-labelledby="layers-title">
+      <figure class="editor-shot editor-shot-layers"><div class="editor-phone"><div class="editor-phone-screen"><img src="drawable/showcase/editor/optimized/editor-layers.jpg" alt="REI Layers panel listing editable weather, shape, text and time layers with visibility, lock, reorder and delete controls" loading="lazy" decoding="async"></div><img class="editor-phone-frame" src="drawable/phone-frame-template.png" alt="" aria-hidden="true"></div><figcaption><span>04 / LAYERS</span> A clear stack keeps every clock part within reach.</figcaption></figure>
+      <div class="editor-layers-copy">
+        <p class="eyebrow"><span></span> STAY ORGANIZED</p><h2 id="layers-title">One layer at<br><em>a time.</em></h2>
+        <p>Open Layers to see the clock’s structure and select the exact piece you want to change. Raise or lower its order, hide it, lock it in place, or remove it.</p>
+        <ul class="editor-check-list"><li><b>Reorder</b><span>Move a layer forward or backward in the stack.</span></li><li><b>Visibility</b><span>Hide and reveal parts while refining the layout.</span></li><li><b>Saved groups</b><span>Select and edit a group together, ungroup it or save reusable combinations.</span></li><li><b>Layer details</b><span>See element type, size or font size, group and z-index.</span></li></ul>
+      </div>
+    </section>
+
+    <section class="editor-control-section section" id="controls" aria-labelledby="controls-title">
+      <div class="editor-section-heading">
+        <div><p class="eyebrow"><span></span> FINE CONTROL</p><h2 id="controls-title">Position, style<br><em>and motion.</em></h2></div>
+        <p>Select any layer on the canvas to open its controls. The editor keeps the preview visible while you adjust that one element.</p>
+      </div>
+      <div class="editor-control-grid">
+        <article class="editor-control-card">
+          <figure class="editor-shot"><div class="editor-phone"><div class="editor-phone-screen"><img src="drawable/showcase/editor/optimized/editor-element-properties.jpg" alt="Selected clock layer with on-canvas selection handles and position controls in the element sheet" loading="lazy" decoding="async"></div><img class="editor-phone-frame" src="drawable/phone-frame-template.png" alt="" aria-hidden="true"></div><figcaption><span>05 / ELEMENT CONTROLS</span> Select a layer to work on its own settings.</figcaption></figure>
+          <div><h3>Place it precisely.</h3><p>Nudge a selected element up, down, left or right. Center it horizontally or vertically, stack items, and choose a 1, 5 or 10 dp movement step.</p><p>Size, appearance and effect controls are organized alongside the element’s position and animation settings.</p></div>
+        </article>
+        <article class="editor-control-card">
+          <figure class="editor-shot"><div class="editor-phone"><div class="editor-phone-screen"><img src="drawable/showcase/editor/optimized/editor-animation.jpg" alt="Selected layer's Animation panel with clock default, off, tilt, parallax, and tilt plus parallax motion options" loading="lazy" decoding="async"></div><img class="editor-phone-frame" src="drawable/phone-frame-template.png" alt="" aria-hidden="true"></div><figcaption><span>06 / MOTION</span> Set the device-motion response per layer.</figcaption></figure>
+          <div><h3>Give each layer its own movement.</h3><p>Keep the clock-wide motion setting, turn motion off for a layer, or choose tilt, parallax, or both. This lets background, artwork and text react with different depth.</p><p>Tap, double-tap and hold actions can also be assigned to an element, with visibility options for context-aware layers.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="editor-feature-areas section" id="feature-areas" aria-labelledby="feature-areas-title">
+      <div class="editor-section-heading">
+        <div><p class="eyebrow"><span></span> MORE TO MAKE YOURS</p><h2 id="feature-areas-title">A whole toolkit<br><em>inside the editor.</em></h2></div>
+        <p>Go beyond the clock face. These panels add live information, atmosphere and responsive motion, with controls to fit each lockscreen to your style.</p>
+      </div>
+      <div class="editor-feature-grid">
+        <article class="editor-feature-card">
+          <figure class="editor-shot"><div class="editor-phone"><div class="editor-phone-screen"><img src="drawable/showcase/editor/optimized/weather-controls.jpg" alt="Weather controls for icon style, refresh interval, temperature units and editor alignment settings" loading="lazy" decoding="async"></div><img class="editor-phone-frame" src="drawable/phone-frame-template.png" alt="" aria-hidden="true"></div><figcaption><span>07 / WEATHER</span> Set the style and update behavior.</figcaption></figure>
+          <div class="editor-feature-copy"><span class="editor-index">WEATHER EFFECTS</span><h3>Put the forecast in the scene.</h3><p>Add weather icons and details, choose an icon style and temperature unit, and set how often the forecast refreshes. Add rain, snow, fog, aurora and other atmosphere from the Nature controls.</p></div>
+        </article>
+        <article class="editor-feature-card">
+          <figure class="editor-shot"><div class="editor-phone"><div class="editor-phone-screen"><img src="drawable/showcase/editor/optimized/widgets-tab.jpg" alt="Widget panel showing saved groups, iOS widgets and Nothing OS widget presets" loading="lazy" decoding="async"></div><img class="editor-phone-frame" src="drawable/phone-frame-template.png" alt="" aria-hidden="true"></div><figcaption><span>08 / WIDGETS</span> Add ready-made cards as editable layers.</figcaption></figure>
+          <div class="editor-feature-copy"><span class="editor-index">WIDGETS &amp; GROUPS</span><h3>Make live details part of the layout.</h3><p>Browse saved groups and widget presets, then place them on the clock. Network speed cards can show download and upload in Mbps; each widget sits in the layer stack so you can position, resize and style it.</p></div>
+        </article>
+        <article class="editor-feature-card">
+          <figure class="editor-shot"><div class="editor-phone"><div class="editor-phone-screen"><img src="drawable/showcase/editor/optimized/companion-tab.jpg" alt="Anime companion editor with a character preview, reaction message and response controls" loading="lazy" decoding="async"></div><img class="editor-phone-frame" src="drawable/phone-frame-template.png" alt="" aria-hidden="true"></div><figcaption><span>09 / COMPANIONS</span> Give a character a place on your clock.</figcaption></figure>
+          <div class="editor-feature-copy"><span class="editor-index">ANIME COMPANIONS</span><h3>Add a character with reactions.</h3><p>Choose from six models—Anya, Homare, Miku, Puff, Zoro or Pikachu—and place one as its own clock layer. Configure touch and motion responses, and let its message bubbles react to companion states and supported clock events.</p><p class="companion-roster-label">SIX 3D COMPANIONS</p><div class="companion-roster" aria-label="Six available 3D companion models"><div class="companion-option companion-anya"><span class="companion-option-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m16 2 3.3 9.8L29 16l-9.7 4L16 30l-3.8-10L3 16l9.2-4.1L16 2Z"/></svg></span><span><b>Anya</b><small>3D model</small></span></div><div class="companion-option companion-homare"><span class="companion-option-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 15c-7-1-9-5-7-8 3-3 7 0 7 8Zm1 0c1-7 5-9 8-7 3 3 0 7-8 7Zm-1 2c7 1 9 5 7 8-3 3-7 0-7-8Zm-2 0c-1 7-5 9-8 7-3-3 0-7 8-7Zm2-2v2m0-2h-2m2 2h2"/></svg></span><span><b>Homare</b><small>3D model</small></span></div><div class="companion-option companion-miku"><span class="companion-option-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M19 5v17.2a5 5 0 1 1-2-4V9l11-2v12.2a5 5 0 1 1-2-4V4l-7 1Z"/></svg></span><span><b>Miku</b><small>3D model</small></span></div><div class="companion-option companion-puff"><span class="companion-option-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3c7 0 13 5.8 13 13s-6 13-13 13S3 23.2 3 16 9 3 16 3Z"/><path d="M11 14h.1m9.8 0h.1M12 20c2.2 2 5.8 2 8 0"/></svg></span><span><b>Puff</b><small>3D model</small></span></div><div class="companion-option companion-zoro"><span class="companion-option-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m8 5 19 19m0-19L8 24M5 8l3-3 3 3-3 3-3-3Zm16 16 3-3 3 3-3 3-3-3Z"/></svg></span><span><b>Zoro</b><small>3D model</small></span></div><div class="companion-option companion-pikachu"><span class="companion-option-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M18 2 6 18h8l-1 12 13-18h-9l1-10Z"/></svg></span><span><b>Pikachu</b><small>3D model</small></span></div></div></div>
+        </article>
+        <article class="editor-feature-card">
+          <figure class="editor-shot"><div class="editor-phone"><div class="editor-phone-screen"><img src="drawable/showcase/editor/optimized/tasks-tab.jpg" alt="Task and habit widget controls with checklist, note, habit grid, agenda and countdown options" loading="lazy" decoding="async"></div><img class="editor-phone-frame" src="drawable/phone-frame-template.png" alt="" aria-hidden="true"></div><figcaption><span>10 / TASKS</span> Keep small plans on the lockscreen.</figcaption></figure>
+          <div class="editor-feature-copy"><span class="editor-index">TASKS &amp; HABITS</span><h3>Build a useful daily glance.</h3><p>Add checklists, sticky notes, habit tracking, agenda reminders and countdowns. Checklist items can be marked complete from the lockscreen, keeping everyday tasks close at hand.</p></div>
+        </article>
+        <article class="editor-feature-card">
+          <figure class="editor-shot"><div class="editor-phone"><div class="editor-phone-screen"><img src="drawable/showcase/editor/optimized/music-tab.jpg" alt="Music widget gallery with Now Playing, LED matrix, minimal bar and vinyl visualizer cards" loading="lazy" decoding="async"></div><img class="editor-phone-frame" src="drawable/phone-frame-template.png" alt="" aria-hidden="true"></div><figcaption><span>11 / MUSIC</span> Choose a player card and visualizer.</figcaption></figure>
+          <div class="editor-feature-copy"><span class="editor-index">MUSIC CARDS</span><h3>Make the player match your theme.</h3><p>Choose a Now Playing card or visualizer, from minimal bars to a vinyl turntable. Use available album artwork or a custom cover, and keep playback controls accessible from the lockscreen.</p></div>
+        </article>
+        <article class="editor-feature-card">
+          <figure class="editor-shot"><div class="editor-phone"><div class="editor-phone-screen"><img src="drawable/showcase/editor/optimized/motion-tab.jpg" alt="Motion controls with gyro pitch and roll, 3D tilt modes, dynamic shadows and intensity settings" loading="lazy" decoding="async"></div><img class="editor-phone-frame" src="drawable/phone-frame-template.png" alt="" aria-hidden="true"></div><figcaption><span>12 / MOTION</span> Tie parallax response to device movement.</figcaption></figure>
+          <div class="editor-feature-copy"><span class="editor-index">MOTION</span><h3>Let the phone move the scene.</h3><p>Use the device gyroscope for tilt and parallax. Pick a motion mode and intensity, with depth and dynamic shadow lighting that help separate foreground art from the wallpaper.</p></div>
+        </article>
+        <article class="editor-feature-card">
+          <figure class="editor-shot"><div class="editor-phone"><div class="editor-phone-screen"><img src="drawable/showcase/editor/optimized/depth-tab.jpg" alt="Wallpaper depth setup with automatic cutout download and manual transparent image options" loading="lazy" decoding="async"></div><img class="editor-phone-frame" src="drawable/phone-frame-template.png" alt="" aria-hidden="true"></div><figcaption><span>13 / DEPTH</span> Bring a subject forward from its background.</figcaption></figure>
+          <div class="editor-feature-copy"><span class="editor-index">DEPTH &amp; CUTOUTS</span><h3>Create a layered wallpaper.</h3><p>Use an automatic subject cutout or supply a transparent image over a base wallpaper. Adjust the subject’s position and scale, then pair the layers with gyro parallax for a spatial effect.</p></div>
+        </article>
+        <article class="editor-feature-card editor-feature-card-wide">
+          <figure class="editor-shot"><div class="editor-phone"><div class="editor-phone-screen"><img src="drawable/showcase/editor/optimized/nature-controls.jpg" alt="Nature and weather atmosphere settings for tilt response, particle density, animation speed, placement, fog and swipe-cleared droplets" loading="lazy" decoding="async"></div><img class="editor-phone-frame" src="drawable/phone-frame-template.png" alt="" aria-hidden="true"></div><figcaption><span>14 / NATURE</span> Tune atmosphere, placement and touch response.</figcaption></figure>
+          <div class="editor-feature-copy"><span class="editor-index">NATURE &amp; WEATHER EFFECTS</span><h3>Shape the atmosphere around the clock.</h3><p>Choose effects such as rain, snow, stars, sunbeams, fog, aurora or fireflies. Set particle density and speed, react to tilt or wind, and choose whether effects sit behind or in front of the clock. Condensation and droplets can respond to tilt and be cleared with a swipe.</p></div>
+        </article>
+        <article class="editor-feature-card editor-feature-card-wide">
+          <figure class="editor-shot"><div class="editor-phone"><div class="editor-phone-screen"><img src="drawable/showcase/editor/optimized/animations-tab.jpg" alt="Animation settings with lock and always-on display font motion, card assembly styles and a per-layer unlock timeline" loading="lazy" decoding="async"></div><img class="editor-phone-frame" src="drawable/phone-frame-template.png" alt="" aria-hidden="true"></div><figcaption><span>15 / ANIMATIONS</span> Coordinate layer motion on wake and unlock.</figcaption></figure>
+          <div class="editor-feature-copy"><span class="editor-index">ANIMATIONS</span><h3>Set the timing and personality.</h3><p>Choose supported clock and always-on display animation behavior, then arrange how cards assemble during wake or unlock. Styles include cards, puzzle, exploded, 3D flip, vortex, magic and elastic, with a timeline to tune motion per layer.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="editor-end section" aria-label="Explore the REI clock creator">
+      <p class="eyebrow"><span></span> MAKE A START</p><h2>Begin with a template.<br><em>Finish in your style.</em></h2>
+      <p>Start with a blank canvas, a saved group or a clock you already like. Every layer is there to help you shape the final lockscreen.</p>
+      <div class="clock-editor-hero-actions"><a class="button primary" href="clock-gallery.html">Choose a clock style <span>↗</span></a><a class="button text" href="index.html#themes">Explore REI themes <span>↗</span></a></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="index.html#home"><img src="drawable/logo.png" alt=""><span>REI</span></a><p>Theme Engine · © 2026</p><a href="#top">Back to top ↑</a></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
