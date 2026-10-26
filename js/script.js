@@ -1,3 +1,31 @@
+(() => {
+  const timeElement = document.getElementById('hero-clock-time');
+  const dateElement = document.getElementById('hero-clock-date');
+  if (!timeElement || !dateElement) return;
+
+  const weekdays = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
+  const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+  let updateTimer;
+
+  function updateHeroClock() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    timeElement.textContent = `${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}`;
+    dateElement.textContent = `${weekdays[now.getDay()]} · ${months[now.getMonth()]} ${now.getDate()}`;
+
+    window.clearTimeout(updateTimer);
+    const nextMinute = (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
+    updateTimer = window.setTimeout(updateHeroClock, Math.max(1, nextMinute));
+  }
+
+  updateHeroClock();
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) updateHeroClock();
+  });
+  window.addEventListener('pageshow', updateHeroClock);
+})();
+
 const header = document.querySelector('.site-header');
 const menu = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#site-nav');
@@ -41,34 +69,6 @@ navLinks.forEach(link => link.addEventListener('click', () => {
   nav.classList.remove('open');
   menu.setAttribute('aria-expanded', 'false');
 }));
-
-const heroClockTime = document.querySelector('#hero-clock-time');
-const heroClockDate = document.querySelector('#hero-clock-date');
-if (heroClockTime && heroClockDate) {
-  const timeFormatter = new Intl.DateTimeFormat(undefined, {
-    hour: '2-digit',
-    minute: '2-digit',
-    hourCycle: 'h23'
-  });
-  const weekdayFormatter = new Intl.DateTimeFormat(undefined, { weekday: 'long' });
-  const monthDayFormatter = new Intl.DateTimeFormat(undefined, { month: 'short', day: 'numeric' });
-  let clockUpdateTimer;
-
-  function updateHeroClock() {
-    const now = new Date();
-    heroClockTime.textContent = timeFormatter.format(now);
-    heroClockDate.textContent = `${weekdayFormatter.format(now).toUpperCase()} · ${monthDayFormatter.format(now).toUpperCase()}`;
-
-    window.clearTimeout(clockUpdateTimer);
-    const millisecondsUntilNextMinute = (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
-    clockUpdateTimer = window.setTimeout(updateHeroClock, Math.max(1, millisecondsUntilNextMinute));
-  }
-
-  updateHeroClock();
-  document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) updateHeroClock();
-  });
-}
 
 function updateHeaderAndNavigation() {
   header.classList.toggle('scrolled', window.scrollY > 16);
