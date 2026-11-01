@@ -156,6 +156,17 @@
 .release-editor { --release-accent: #b39cff; }
 .release-widgets { --release-accent: #78d8cf; }
 .release-community { --release-accent: #ffbd79; }
+.release-hud { --release-accent: #00f0ff; }
+.release-snapping { --release-accent: #ff007f; }
+.release-weather { --release-accent: #4dd0e1; }
+.release-astronomy { --release-accent: #b388ff; }
+.release-typography { --release-accent: #ffd54f; }
+.release-motion { --release-accent: #ff80ab; }
+.release-header { --release-accent: #00e676; }
+.release-clean { --release-accent: #7c4dff; }
+.release-textures { --release-accent: #ff6e40; }
+.release-wallpaper { --release-accent: #ea80fc; }
+.release-system { --release-accent: #69f0ae; }
 
 .release-card summary {
   position: relative;

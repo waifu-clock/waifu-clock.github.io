@@ -646,6 +646,257 @@
   text-transform: uppercase;
 }
 
+/* 7.4 Feature Demos */
+.hud-demo {
+  position: relative;
+  display: flex;
+  height: 115px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -28px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #1b283d, #0d121c 70%);
+  border-top: 1px solid #00f0ff22;
+  border-bottom: 1px solid #00f0ff22;
+}
+
+.hud-reticle {
+  position: relative;
+  width: 74px;
+  height: 74px;
+  border: 1px dashed #00f0ff66;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  animation: hud-spin 20s linear infinite;
+}
+
+.hud-reticle::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid #ffbd7966;
+  border-radius: 50%;
+}
+
+@keyframes hud-spin {
+  to { transform: rotate(360deg); }
+}
+
+.hud-reticle-inner {
+  font: 500 10px 'DM Mono', monospace;
+  color: #00f0ff;
+  letter-spacing: -.02em;
+}
+
+.hud-bars {
+  position: absolute;
+  right: 18px;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 48px;
+}
+
+.hud-bars i {
+  width: 4px;
+  background: linear-gradient(180deg, #00f0ff, #ff007f);
+  border-radius: 2px;
+}
+
+.hud-bars i:nth-child(1) { height: 18px; }
+.hud-bars i:nth-child(2) { height: 34px; }
+.hud-bars i:nth-child(3) { height: 46px; }
+.hud-bars i:nth-child(4) { height: 26px; }
+.hud-bars i:nth-child(5) { height: 38px; }
+
+.hud-tag {
+  position: absolute;
+  left: 18px;
+  color: #ffbd79;
+  font: 8px 'DM Mono', monospace;
+  letter-spacing: .1em;
+}
+
+.snap-demo {
+  position: relative;
+  display: flex;
+  height: 115px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -28px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #2e1d33, #15111d 70%);
+}
+
+.snap-box {
+  position: absolute;
+  padding: 8px 12px;
+  background: #191428;
+  border: 1px solid #ff007f;
+  color: #fff;
+  font: 8px 'DM Mono', monospace;
+  box-shadow: 0 0 14px #ff007f44;
+}
+
+.snap-box-one { transform: translate(-38px, -14px); }
+.snap-box-two { transform: translate(38px, 14px); }
+
+.snap-line-x {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: #ff007f88;
+  box-shadow: 0 0 8px #ff007f;
+}
+
+.snap-line-y {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: #00f0ff88;
+  box-shadow: 0 0 8px #00f0ff;
+}
+
+.snap-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 18px;
+  color: #00f0ff;
+  font: 7px 'DM Mono', monospace;
+}
+
+.weather-demo {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 12px;
+  height: 115px;
+  margin: 0 -28px;
+  padding: 0 28px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #1b2b3f, #101524 70%);
+}
+
+.weather-icon-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #141b2c;
+  border: 1px solid #4dd0e144;
+  border-radius: 6px;
+}
+
+.weather-icon-card svg {
+  width: 28px;
+  height: 28px;
+  color: #4dd0e1;
+}
+
+.weather-icon-card div {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-icon-card strong {
+  font: 500 18px 'DM Mono', monospace;
+  color: #fff;
+}
+
+.weather-icon-card small {
+  color: #4dd0e1;
+  font: 7px 'DM Mono', monospace;
+}
+
+.astronomy-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #18162e;
+  border: 1px solid #b388ff44;
+  border-radius: 6px;
+}
+
+.moon-phase-orb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 75% 50%, #b388ff 45%, #2a2245 50%);
+  box-shadow: 0 0 10px #b388ff55;
+}
+
+.astronomy-card div {
+  display: flex;
+  flex-direction: column;
+}
+
+.astronomy-card strong {
+  font-size: 10px;
+  color: #fff;
+  letter-spacing: .02em;
+}
+
+.astronomy-card small {
+  color: #b388ff;
+  font: 7px 'DM Mono', monospace;
+}
+
+.header-demo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 115px;
+  margin: 0 -28px;
+  padding: 14px 22px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #182723, #0f1618);
+  border-top: 1px solid #00e67622;
+  border-bottom: 1px solid #00e67622;
+}
+
+.header-qs-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #00e676;
+  font: 8px 'DM Mono', monospace;
+  letter-spacing: .08em;
+}
+
+.header-qs-clock {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.header-qs-clock strong {
+  font: 500 32px 'DM Mono', monospace;
+  color: #fff;
+  letter-spacing: -.08em;
+}
+
+.header-qs-clock span {
+  color: #00e676;
+  font: 8px 'DM Mono', monospace;
+}
+
+.header-clean-pill {
+  padding: 4px 8px;
+  background: #00e67622;
+  border: 1px solid #00e67666;
+  border-radius: 99px;
+  color: #00e676;
+  font: 7px 'DM Mono', monospace;
+}
+
 .feature-end {
   text-align: center;
   background: radial-gradient(ellipse at center, #33213e 0%, transparent 64%);
@@ -661,7 +912,7 @@
   .feature-hero-art { min-height: 460px; }
   .hero-device { height: 430px; }
   .feature-card { padding: 24px; }
-  .editor-demo { margin-inline: -24px; }
+  .editor-demo, .hud-demo, .snap-demo, .weather-demo, .header-demo { margin-inline: -24px; }
 }
 
 @media (max-width: 760px) {
@@ -682,7 +933,7 @@
   .feature-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
   .feature-card { min-height: 0; padding: 22px; }
   .feature-card > p { min-height: 0; }
-  .editor-demo { margin-inline: -22px; }
+  .editor-demo, .hud-demo, .snap-demo, .weather-demo, .header-demo { margin-inline: -22px; }
   .clock-picker-demo {
     grid-template-columns: minmax(0, .82fr) 18px minmax(0, 1.18fr);
     gap: 7px;
